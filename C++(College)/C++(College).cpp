@@ -113,6 +113,7 @@ int main()
 
 	// Задание 2
 
+    /*
 	std::cout << "[ - ] Программа \"Времена годa\" \n\n";
 	std::cout << "[1] Лето\n[2] Осень\n[3] Зима\n[4] Весна\n\n";
 	std::cout << "[-] Введите значение: ";
@@ -124,6 +125,28 @@ int main()
 	else if (choose == 3) std::cout << "[ - ] Сейчас зима, следует одеться очень тепло и взять с собой перчатки.";
 	else if (choose == 4) std::cout << "[ - ] Сейчас весна, следует одеться полегче и взять с собой солнцезащитные очки.";
 	else std::cout << "Вы некорректно ввели значение!";
+	*/
+
+
+
+    // Задание 3
+
+	std::cout << "[ + ] Введите число: ";
+	int choose;
+	std::cin >> choose;
+	if (choose >= 0 and choose <= 10) std::cout << "[ + ] Цифра в диапазоне: 0-10";
+	else if (choose >= 11 and choose <= 20) std::cout << "[ + ] Цифра в диапазоне: 11-20";
+	else if (choose >= 21 and choose <= 30) std::cout << "[ + ] Цифра в диапазоне: 21-30";
+	else if (choose >= 31 and choose <= 40) std::cout << "[ + ] Цифра в диапазоне: 31-40";
+	else if (choose >= 41 and choose <= 50) std::cout << "[ + ] Цифра в диапазоне: 41-50";
+	else if (choose >= 51 and choose <= 60) std::cout << "[ + ] Цифра в диапазоне: 51-60";
+	else if (choose >= 61 and choose <= 70) std::cout << "[ + ] Цифра в диапазоне: 61-70";
+	else if (choose >= 71 and choose <= 80) std::cout << "[ + ] Цифра в диапазоне: 71-80";
+	else if (choose >= 81 and choose <= 90) std::cout << "[ + ] Цифра в диапазоне: 81-90";
+	else if (choose >= 91 and choose <= 100) std::cout << "[ + ] Цифра в диапазоне: 91-100";
+	else if (choose < 0) std::cout << "[ + ] Ошибка! Число меньше 0.";
+	else if (choose > 100) std::cout << "[ + ] Ошибка! Число больше 100.";
+
 
 	system("pause>nul");
 	return 0;
