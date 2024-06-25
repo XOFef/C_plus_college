@@ -131,6 +131,7 @@ int main()
 
     // Задание 3
 
+	/*
 	std::cout << "[ + ] Введите число: ";
 	int choose;
 	std::cin >> choose;
@@ -146,8 +147,47 @@ int main()
 	else if (choose >= 91 and choose <= 100) std::cout << "[ + ] Цифра в диапазоне: 91-100";
 	else if (choose < 0) std::cout << "[ + ] Ошибка! Число меньше 0.";
 	else if (choose > 100) std::cout << "[ + ] Ошибка! Число больше 100.";
+	*/
 
 
+
+	// Задание 4
+
+	/*int num, answer;
+	std::cout << "[ + ] Введите число: ";
+	std::cin >> num;
+	for (int i = 1; i < 10; i++)
+	{
+		std::cout << "[ + ] Решите пример: " << num << " x " << i << "\n[ + ] Ответ: ";
+		std::cin >> answer;
+		if (answer == num * i) std::cout << "[ + ] Пример решен правильно!\n\n";
+		else
+		{
+			std::cout << "[ - ] Ошибка, пример решен неверно!";
+			break;
+		}
+		if (i == 9) std::cout << "[ + ] Примеры решены, поздравляем! ";
+	}*/
+
+
+
+	// Задание 5
+
+	std::cout << "Выберете операцию: \n";
+	std::cout << "[1] складывать \n[2] вычитать \n[3] умножать \n[4] делить \n[5] деление от остатка \n";
+	int choose, num1, num2;
+	std::cin >> choose;
+	std::cout << "Введите первое число: ";
+	std::cin >> num1;
+	std::cout << "Введите второе число: ";
+	std::cin >> num2;
+
+	if (choose == 1) std::cout << "[ + ] Результат: " << num1 << " + " << num2 << " = " << num1 + num2;
+	else if (choose == 2) std::cout << "[ + ] Результат: " << num1 << " - " << num2 << " = " << num1 - num2;
+	else if (choose == 3) std::cout << "[ + ] Результат: " << num1 << " x " << num2 << " = " << num1 * num2;
+	else if (choose == 4) std::cout << "[ + ] Результат: " << num1 << " / " << num2 << " = " << num1 / num2;
+	else if (choose == 5) std::cout << "[ + ] Результат: " << num1 << " % " << num2 << " = " << num1 % num2;
+	else std::cout << "Ошибка ввода!";
 	system("pause>nul");
 	return 0;
 }
