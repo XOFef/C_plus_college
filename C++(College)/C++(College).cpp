@@ -173,7 +173,7 @@ int main()
 
 	// Задание 5
 
-	std::cout << "Выберете операцию: \n";
+	/*std::cout << "Выберете операцию: \n";
 	std::cout << "[1] складывать \n[2] вычитать \n[3] умножать \n[4] делить \n[5] деление от остатка \n";
 	int choose, num1, num2;
 	std::cin >> choose;
@@ -187,7 +187,169 @@ int main()
 	else if (choose == 3) std::cout << "[ + ] Результат: " << num1 << " x " << num2 << " = " << num1 * num2;
 	else if (choose == 4) std::cout << "[ + ] Результат: " << num1 << " / " << num2 << " = " << num1 / num2;
 	else if (choose == 5) std::cout << "[ + ] Результат: " << num1 << " % " << num2 << " = " << num1 % num2;
-	else std::cout << "Ошибка ввода!";
+	else std::cout << "Ошибка ввода!";*/
+
+
+
+	// Задание 6
+
+	/*int month;
+	std::cout << "[ + ] Месяца года\n\n[ 1 ] Январь\n[ 2 ] Февраль\n[ 3 ] Март\n[ 4 ] Апрель\n[ 5 ] Май\n[ 6 ] Июнь\n[ 7 ] Июль\n[ 8 ] Август\n[ 9 ] Сентябрь\n[ 10 ] Октябрь\n[ 11 ] Ноябрь\n[ 12 ] Декабрь\n\n[ + ] Выберите месяц: ";
+	std::cin >> month;
+
+	switch (month)
+	{
+	case 1:
+		std::cout << "[ + ] Выбран месяц “Январь”";
+		break;
+	case 2:
+		std::cout << "[ + ] Выбран месяц “Февраль”";
+		break;
+	case 3:
+		std::cout << "[ + ] Выбран месяц “Март”";
+		break;
+	case 4:
+		std::cout << "[ + ] Выбран месяц “Апрель”";
+		break;
+	case 5:
+		std::cout << "[ + ] Выбран месяц “Май”";
+		break;
+	case 6:
+		std::cout << "[ + ] Выбран месяц “Июнь”";
+		break;
+	case 7:
+		std::cout << "[ + ] Выбран месяц “Июль”";
+		break;
+	case 8:
+		std::cout << "[ + ] Выбран месяц “Август”";
+		break;
+	case 9:
+		std::cout << "[ + ] Выбран месяц “Сентябрь”";
+		break;
+	case 10:
+		std::cout << "[ + ] Выбран месяц “Октябрь”";
+		break;
+	case 11:
+		std::cout << "[ + ] Выбран месяц “Ноябрь”";
+		break;
+	case 12:
+		std::cout << "[ + ] Выбран месяц “Декабрь”";
+		break;
+	default:
+		std::cout << "[ + ] Не правильно введен номер месяца!";
+		break;
+	}*/
+
+
+
+	// Задание 7
+
+	/*int month, day;
+	std::cout << "[ + ] Календарь\n\n[ 1 ] Январь\n[ 2 ] Февраль\n[ 3 ] Март\n[ 4 ] Апрель\n[ 5 ] Май\n[ 6 ] Июнь\n[ 7 ] Июль\n[ 8 ] Август\n[ 9 ] Сентябрь\n[ 10 ] Октябрь\n[ 11 ] Ноябрь\n[ 12 ] Декабрь\n\n[ + ] Выберите месяц: ";
+	std::cin >> month;
+
+	switch (month)
+	{
+	case 1:
+		std::cout << "[ + ] Выбран месяц “Январь”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Января.";
+		break;
+	case 2:
+		std::cout << "[ + ] Выбран месяц “Февраль”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Февраля.";
+		break;
+	case 3:
+		std::cout << "[ + ] Выбран месяц “Март”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Марта.";
+		break;
+	case 4:
+		std::cout << "[ + ] Выбран месяц “Апрель”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Апреля.";
+		break;
+	case 5:
+		std::cout << "[ + ] Выбран месяц “Май”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Мая.";
+		break;
+	case 6:
+		std::cout << "[ + ] Выбран месяц “Июнь”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Июня.";
+		break;
+	case 7:
+		std::cout << "[ + ] Выбран месяц “Июль”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Июля.";
+		break;
+	case 8:
+		std::cout << "[ + ] Выбран месяц “Август”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Августа.";
+		break;
+	case 9:
+		std::cout << "[ + ] Выбран месяц “Сентябрь”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Сентября.";
+		break;
+	case 10:
+		std::cout << "[ + ] Выбран месяц “Октябрь”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Октября.";
+		break;
+	case 11:
+		std::cout << "[ + ] Выбран месяц “Ноябрь”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Ноября.";
+		break;
+	case 12:
+		std::cout << "[ + ] Выбран месяц “Декабрь”\n\n";
+		std::cout << "[ + ] Выберите день месяца: ";
+		std::cin >> day;
+		std::cout << "[ + ] Календарь: " << day << " Декабря.";
+		break;
+	default:
+		std::cout << "[ + ] Не правильно введен номер месяца!";
+		break;
+	}*/
+
+
+
+	// Задание 9
+
+	int num;
+	std::cout << "[ + ] Цикл \"WHILE\"\n[+] Введите число : ";
+	std::cin >> num;
+	while (true)
+	{
+		int i = 1;
+		if (num == 0) break;
+		else if (num >= 1 and num <= 15)
+			while (i <= num)
+			{
+				std::cout << "[ + ] Цикл отработал. Круг: " << i << std::endl;
+				i++;
+			}
+		else std::cout << "Ошибка ввода!\n";
+		std::cout << "[+] Введите число : ";
+		std::cin >> num;
+	}
+
+
 	system("pause>nul");
 	return 0;
 }
