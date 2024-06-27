@@ -331,7 +331,7 @@ int main()
 
 	// Задание 9
 
-	int num;
+	/*int num;
 	std::cout << "[ + ] Цикл \"WHILE\"\n[+] Введите число : ";
 	std::cin >> num;
 	while (true)
@@ -347,7 +347,92 @@ int main()
 		else std::cout << "Ошибка ввода!\n";
 		std::cout << "[+] Введите число : ";
 		std::cin >> num;
+	}*/
+
+
+	// Задание 10
+
+	/*srand(time(0));
+	std::cout << "[1] Начать игру.\n[2] Выйти.\n";
+	int choose, trying = 5, attempt = 0, number;
+	std::cin >> choose;
+	if (choose == 1)
+	{
+		while (true)
+		{
+			int num = rand() % 11;
+			std::cout << "\n[ + ] Угаданных чисел: [ " << attempt << " / 3 ] \n[ + ] Попыток: [" << trying << "]\n\n";
+			std::cout << "[ > ] Угадать число: ";
+			std::cin >> number;
+			if (number == num) {
+				std::cout << "[ + ] Вы угадали число!\n";
+				attempt++;
+				trying--;
+			}
+			else if (attempt == 3) std::cout << "Вы выйграли!";
+			else if (trying == 0) {
+				std::cout << "Вы проиграли!";
+				break;
+			}
+			else if (number < 0 or number > 10) {
+				std::cout << "Ошибка ввода!\n";
+				continue;
+			}
+			else if (number != num) {
+				std::cout << "[ - ] Вы не угадали число!\n";
+				trying--;
+			}
+		}
+
 	}
+	else if (choose == 2) std::cout << "Выход!";
+	else std::cout << "Ошибка ввода!";*/
+
+
+
+	// Задание 11, 13-19
+
+	int choose;
+	std::cout << "[ + ] Программа - “Геометрические фигуры”\n\n";
+	std::cout << "[ 1 ] Линия\n[ 2 ] Квадрат\n[ 3 ] Прямоугольник\n[ 4 ] Треугольник\n[ 5 ] Решетка\n[ 6 ] Крестик\n[ 7 ] Плюс\n[ 8 ] Ромб\n\n[ + ] Выберите фигуру: ";
+	std::cin >> choose;
+
+	if (choose == 1) {
+
+		std::cout << "\n[ + ] Фигура: “Линия”\n\n[ 1 ] Горизонтальная\n[ 2 ] Вертикальная \n\nВыберите тип : ";
+		int position, length, i = 0;
+		char texture;
+		std::cin >> position;
+		if (position < 0 or position > 2) {
+			std::cout << "Ошибка ввода!";
+			exit;
+		}
+		std::cout << "[ + ] Длина линии: ";
+		std::cin >> length;
+		std::cout << "[ + ] Текстура линии: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		if (position == 1) {
+			while (i < length)
+			{
+				std::cout << texture;
+				i++;
+			}
+		}
+		else if (position == 2) {
+			while (i < length) {
+				std::cout << "\t" << texture << std::endl;
+				i++;
+			}
+		}
+	}
+	else std::cout << "Ошибка ввода!";
+
+
+
+
+
+
 
 
 	system("pause>nul");
