@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-
+#include <cstdlib>
 
 
 
@@ -173,7 +173,7 @@ int main()
 
 	// Задание 5
 
-	/*std::cout << "Выберете операцию: \n";
+	std::cout << "Выберете операцию: \n";
 	std::cout << "[1] складывать \n[2] вычитать \n[3] умножать \n[4] делить \n[5] деление от остатка \n";
 	int choose, num1, num2;
 	std::cin >> choose;
@@ -187,7 +187,7 @@ int main()
 	else if (choose == 3) std::cout << "[ + ] Результат: " << num1 << " x " << num2 << " = " << num1 * num2;
 	else if (choose == 4) std::cout << "[ + ] Результат: " << num1 << " / " << num2 << " = " << num1 / num2;
 	else if (choose == 5) std::cout << "[ + ] Результат: " << num1 << " % " << num2 << " = " << num1 % num2;
-	else std::cout << "Ошибка ввода!";*/
+	else std::cout << "Ошибка ввода!";
 
 
 
@@ -354,18 +354,18 @@ int main()
 
 	/*srand(time(0));
 	std::cout << "[1] Начать игру.\n[2] Выйти.\n";
-	int choose, trying = 5, attempt = 0, number;
+	int choose, trying = 10, attempt = 0, number;
 	std::cin >> choose;
 	if (choose == 1)
 	{
 		while (true)
 		{
 			int num = rand() % 11;
-			std::cout << "\n[ + ] Угаданных чисел: [ " << attempt << " / 3 ] \n[ + ] Попыток: [" << trying << "]\n\n";
-			std::cout << "[ > ] Угадать число: ";
+			std::cout << "\n[ + ] Угаданных цифр: [ " << attempt << " / 3 ] \n[ + ] Попыток: [" << trying << "]\n\n";
+			std::cout << "[ > ] Угадать цифру: ";
 			std::cin >> number;
 			if (number == num) {
-				std::cout << "[ + ] Вы угадали число!\n";
+				std::cout << "[ + ] Вы угадали цифру!\n";
 				attempt++;
 				trying--;
 			}
@@ -392,7 +392,7 @@ int main()
 
 	// Задание 11, 13-19
 
-	int choose;
+	/*int choose;
 	std::cout << "[ + ] Программа - “Геометрические фигуры”\n\n";
 	std::cout << "[ 1 ] Линия\n[ 2 ] Квадрат\n[ 3 ] Прямоугольник\n[ 4 ] Треугольник\n[ 5 ] Решетка\n[ 6 ] Крестик\n[ 7 ] Плюс\n[ 8 ] Ромб\n\n[ + ] Выберите фигуру: ";
 	std::cin >> choose;
@@ -426,14 +426,105 @@ int main()
 			}
 		}
 	}
-	else std::cout << "Ошибка ввода!";
+
+
+	else std::cout << "Ошибка ввода!";*/
 
 
 
+	// Задание 12
 
+	/*std::string name = "user";
+	int numQuestion = 8;
+	std::cout << "Приветсвуем!\n\n";
+	while (true) {
+		std::cout << "[ 1 ] Начать игру\n[ 2 ] Настройки\n[ 3 ] Правила\n[ 4 ] Выйти\n";
+		int choose;
+		std::cin >> choose;
 
+		if (choose == 1) {
 
+		}
 
+		else if (choose == 2) {
+			while (true)
+			{
+				std::cout << "\n[ 1 ] Редактирование имя игрока;\n[ 2 ] Редактирование вопросов в игре;\n[ 3 ] Редактирование цвет интерфейса;\n[ 4 ] Вернуться в меню;\n";
+				int chooseTools;
+				std::cin >> chooseTools;
+				if (chooseTools == 1) {
+					std::cout << "\nВведите имя: ";
+					std::cin >> name;
+				}
+
+				else if (chooseTools == 2) {
+					std::cout << "\nВведите количество вопросов:\n[ 1 ] 8;\n[ 2 ] 10;\n[ 3 ] 12;\n";
+					int chooseQuestion;
+					std::cin >> chooseQuestion;
+					switch (chooseQuestion)
+					{
+					case 1:
+						numQuestion = 8;
+						break;
+					case 2:
+						numQuestion = 10;
+						break;
+					case 3:
+						numQuestion = 12;
+						break;
+					default:
+						std::cout << "Ошибка ввода!\n\n";
+						break;
+					}
+				}
+
+				else if (chooseTools == 3) {
+					std::cout << "\nВведите цвет:\n[ 1 ] Голубой;\n[ 2 ] Синий;\n[ 3 ] Зеленый;\n[ 4 ] Красный;\n[ 5 ] Белый;\n";
+					int chooseColor;
+					std::cin >> chooseColor;
+					switch (chooseColor)
+					{
+					case 1:
+						system("color 3");
+						break;
+					case 2:
+						system("color 1");
+						break;
+					case 3:
+						system("color 2");
+						break;
+					case 4:
+						system("color 4");
+						break;
+					case 5:
+						system("color 7");
+						break;
+					default:
+						std::cout << "Ошибка ввода!\n\n";
+						break;
+					}
+				}
+
+				else if (chooseTools == 4) {
+					break;
+				}
+
+				else std::cout << "Ошибка ввода!\n\n";
+			}
+		}
+
+		else if (choose == 3) {
+			std::cout << "- Игрок получает очки за правильный ответ на вопрос;\n- Игрок проходит дальше за правильный ответ;\n- Игрок теряет жизнь при неправильном ответе.\n\n";
+		}
+
+		else if (choose == 4) {
+			break;
+		}
+
+		else std::cout << "Ошибка ввода!\n\n";
+	}*/
+
+	
 
 	system("pause>nul");
 	return 0;
