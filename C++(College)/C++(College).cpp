@@ -1,19 +1,19 @@
 ﻿#include <iostream>
 #include <cstdlib>
 
-// Задание 12
-void win() {
-	std::cout << "Ответ верный!\n\n";
-}
-void loose() {
-	std::cout << "Ответ не верный!\n\n";
-}
-void GameOverLoose() {
-	std::cout << "\n\nИгра закончена! Вы проиграли!";
-}
-void GameOverWin() {
-	std::cout << "\n\nИгра закончена! Вы Выйграли!";
-}
+//// Задание 12
+//void win() {
+//	std::cout << "Ответ верный!\n\n";
+//}
+//void loose() {
+//	std::cout << "Ответ не верный!\n\n";
+//}
+//void GameOverLoose() {
+//	std::cout << "\n\nИгра закончена! Вы проиграли!";
+//}
+//void GameOverWin() {
+//	std::cout << "\n\nИгра закончена! Вы Выйграли!";
+//}
 
 int main()
 {
@@ -125,10 +125,10 @@ int main()
 
 	// Задание 2
 
-    /*
-	std::cout << "[ - ] Программа \"Времена годa\" \n\n";
+    
+	/*std::cout << "[ - ] Программа \"Времена годa\" \n\n";
 	std::cout << "[1] Лето\n[2] Осень\n[3] Зима\n[4] Весна\n\n";
-	std::cout << "[-] Введите значение: ";
+	std::cout << "[ - ] Введите значение: ";
 	int choose;
 	std::cin >> choose;
 
@@ -136,8 +136,8 @@ int main()
 	else if (choose == 2) std::cout << "[ - ] Сейчас осень, следует одеться тепло и взять с собой зонт.";
 	else if (choose == 3) std::cout << "[ - ] Сейчас зима, следует одеться очень тепло и взять с собой перчатки.";
 	else if (choose == 4) std::cout << "[ - ] Сейчас весна, следует одеться полегче и взять с собой солнцезащитные очки.";
-	else std::cout << "Вы некорректно ввели значение!";
-	*/
+	else std::cout << "Вы некорректно ввели значение!";*/
+	
 
 
 
@@ -404,17 +404,17 @@ int main()
 
 	// Задание 11, 13-19
 
-	/*int choose;
+	int choose, length;
+	char texture;
 	std::cout << "[ + ] Программа - “Геометрические фигуры”\n\n";
 	std::cout << "[ 1 ] Линия\n[ 2 ] Квадрат\n[ 3 ] Прямоугольник\n[ 4 ] Треугольник\n[ 5 ] Решетка\n[ 6 ] Крестик\n[ 7 ] Плюс\n[ 8 ] Ромб\n\n[ + ] Выберите фигуру: ";
 	std::cin >> choose;
 
-	
+	// Line
 	if (choose == 1) {
 
 		std::cout << "\n[ + ] Фигура: “Линия”\n\n[ 1 ] Горизонтальная\n[ 2 ] Вертикальная \n\nВыберите тип : ";
-		int position, length, i = 0;
-		char texture;
+		int position, i = 0;
 		std::cin >> position;
 		if (position < 0 or position > 2) {
 			std::cout << "Ошибка ввода!";
@@ -441,371 +441,412 @@ int main()
 	}
 
 
+	// Square
+	else if (choose == 2) {
+		std::cout << "\n[ + ] Фигура: “Квадрат”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
+		int type, length;
+		std::cin >> type;
+		if (type < 0 or type > 2) {
+			std::cout << "Ошибка ввода!";
+			exit;
+		}
+		std::cout << "[ + ] Размер:  ";
+		std::cin >> length;
+		std::cout << "[ + ] Текстура: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		if (type == 1) {
+			for (int i = 0; i < length; i++) {
+				std::string square(length, texture);
+				std::cout << square << std::endl;
+			}
+		}
+		else if (type == 2) {
+			char i = ' ';
+			std::string nul(length - 2, i);
+			std::string square(length, texture);
+			std::string square_low(length, texture);
+			std::cout << square << std::endl;
+			for (int i = 0; i < length-2; i++)
+			{
+				std::cout << texture << nul << texture <<std::endl;
+			}
+			std::cout << square << std::endl;
+		}
+	}
 
 
-	else std::cout << "Ошибка ввода!";*/
+	// Rectangle
+
+
+
+
+
+
+
+	else std::cout << "Ошибка ввода!";
 
 
 
 	// Задание 12
 
-	char quiz;
-	std::string name = "user";
-	int numQuestion = 8;
-	std::cout << "Приветсвуем!\n";
-	while (true) {
-		std::cout << "\n[ 1 ] Начать игру\n[ 2 ] Настройки\n[ 3 ] Правила\n[ 4 ] Выйти\n";
-		int choose;
-		std::cin >> choose;
+	//char quiz;
+	//std::string name = "user";
+	//int numQuestion = 8;
+	//std::cout << "Приветсвуем!\n";
+	//while (true) {
+	//	std::cout << "\n[ 1 ] Начать игру\n[ 2 ] Настройки\n[ 3 ] Правила\n[ 4 ] Выйти\n";
+	//	int choose;
+	//	std::cin >> choose;
 
-		if (choose == 1) {
-			int life = 3, glasses = 0;
-			// 1
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 1 ] Вопрос: Системный язык программирования?\n";
-			std::cout << "[ A ] Python\t[ B ] С#\n[ C ] Ruby\t[ D ] C++\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'd' or quiz == 'D') {
-				win();
-				glasses++;
-			}
-			else {
-				loose();
-				life--;
-			}
+	//	if (choose == 1) {
+	//		int life = 3, glasses = 0;
+	//		// 1
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 1 ] Вопрос: Системный язык программирования?\n";
+	//		std::cout << "[ A ] Python\t[ B ] С#\n[ C ] Ruby\t[ D ] C++\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'd' or quiz == 'D') {
+	//			win();
+	//			glasses++;
+	//		}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
-			// 2
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 2 ] Вопрос: Какой язык программирования является наиболее популярным в мире?\n";
-			std::cout << "[ A ] Python\t[ B ] Java\n[ C ] C++\t[ D ] Ruby\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'a' or quiz == 'A') {
-				win();
-				glasses++;
-			}
-			else {
-				loose();
-				life--;
-			}
+	//		// 2
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 2 ] Вопрос: Какой язык программирования является наиболее популярным в мире?\n";
+	//		std::cout << "[ A ] Python\t[ B ] Java\n[ C ] C++\t[ D ] Ruby\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'a' or quiz == 'A') {
+	//			win();
+	//			glasses++;
+	//		}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
-			// 3
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 3 ] Вопрос: Что такое HTML?\n";
-			std::cout << "[ A ] Основной язык разметки веб-страниц\t[ B ] Язык программирования для создания приложений\n[ C ] Протокол передачи данных в сети   \t[ D ] Графический редактор\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'a' or quiz == 'A') {
-				win();
-				glasses++;
-			}
-			else {
-				loose();
-				life--;
-			}
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		// 3
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 3 ] Вопрос: Что такое HTML?\n";
+	//		std::cout << "[ A ] Основной язык разметки веб-страниц\t[ B ] Язык программирования для создания приложений\n[ C ] Протокол передачи данных в сети   \t[ D ] Графический редактор\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'a' or quiz == 'A') {
+	//			win();
+	//			glasses++;
+	//		}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
-			// 4
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 4 ] Вопрос: Что такое SQL?\n";
-			std::cout << "[ A ] Язык программирования для создания веб-приложений\t[ B ] Язык запросов к базам данных\n[ C ] Фреймворк для разработки мобильных приложений\t[ D ] Система управления контентом\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'b' or quiz == 'B') {
-				win();
-				glasses++;
-			}
+	//		// 4
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 4 ] Вопрос: Что такое SQL?\n";
+	//		std::cout << "[ A ] Язык программирования для создания веб-приложений\t[ B ] Язык запросов к базам данных\n[ C ] Фреймворк для разработки мобильных приложений\t[ D ] Система управления контентом\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'b' or quiz == 'B') {
+	//			win();
+	//			glasses++;
+	//		}
 
-			else {
-				loose();
-				life--;
-			}
-
-
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			// 5
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 5 ] Вопрос: Что такое алгоритм?\n";
-			std::cout << "[ A ] Программа для защиты от вирусов\t[ B ] Последовательность шагов для решения задачи\n[ C ] Тип базы данных             \t[ D ] Вид компьютерной аппаратуры\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'b' or quiz == 'B') {
-				win();
-				glasses++;
-			}
-
-			else {
-				loose();
-				life--;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
 
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
-			
+	//		// 5
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 5 ] Вопрос: Что такое алгоритм?\n";
+	//		std::cout << "[ A ] Программа для защиты от вирусов\t[ B ] Последовательность шагов для решения задачи\n[ C ] Тип базы данных             \t[ D ] Вид компьютерной аппаратуры\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'b' or quiz == 'B') {
+	//			win();
+	//			glasses++;
+	//		}
 
-			// 6
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 6 ] Вопрос: Что такое API?\n";
-			std::cout << "[ A ] Аппаратное программное обеспечение\t                        [ B ] Программа для создания графики\n[ C ] Интерфейс приложения для взаимодействия с другими программами\t[ D ] Специальный вид компьютерных игр\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'c' or quiz == 'C') {
-				win();
-				glasses++;
-			}
-
-			else {
-				loose();
-				life--;
-			}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
+	//		
+
+	//		// 6
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 6 ] Вопрос: Что такое API?\n";
+	//		std::cout << "[ A ] Аппаратное программное обеспечение\t                        [ B ] Программа для создания графики\n[ C ] Интерфейс приложения для взаимодействия с другими программами\t[ D ] Специальный вид компьютерных игр\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'c' or quiz == 'C') {
+	//			win();
+	//			glasses++;
+	//		}
+
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			// 7
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 7 ] Вопрос: Что такое Git?\n";
-			std::cout << "[ A ] Система управления базами данных\t  [ B ] Язык программирования\n[ C ] Система контроля версий\t          [ D ] Облачное хранилище файлов\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'c' or quiz == 'C') {
-				win();
-				glasses++;
-			}
-
-			else {
-				loose();
-				life--;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
 
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		// 7
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 7 ] Вопрос: Что такое Git?\n";
+	//		std::cout << "[ A ] Система управления базами данных\t  [ B ] Язык программирования\n[ C ] Система контроля версий\t          [ D ] Облачное хранилище файлов\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'c' or quiz == 'C') {
+	//			win();
+	//			glasses++;
+	//		}
+
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			// 8
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 8 ] Вопрос: Что такое SSL?\n";
-			std::cout << "[ A ] Протокол безопасной передачи данных по сети\t[ B ] Вид языка программирования\n[ C ] Аппаратное устройство хранения данных\t        [ D ] Специализированное программное обеспечение\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'a' or quiz == 'A') {
-				win();
-				glasses++;
-			}
-
-			else {
-				loose();
-				life--;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
 
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		// 8
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 8 ] Вопрос: Что такое SSL?\n";
+	//		std::cout << "[ A ] Протокол безопасной передачи данных по сети\t[ B ] Вид языка программирования\n[ C ] Аппаратное устройство хранения данных\t        [ D ] Специализированное программное обеспечение\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'a' or quiz == 'A') {
+	//			win();
+	//			glasses++;
+	//		}
 
-			if (numQuestion == 8) {
-				GameOverWin();
-				break;
-			}
-
-
-			// 9
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 9 ] Вопрос: Что такое Docker?\n";
-			std::cout << "[ A ] Виртуальная машина\t[ B ] Контейнеризация приложений\n[ C ] Облачное хранилище данных\t[ D ] Язык программирования\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'd' or quiz == 'D') {
-				win();
-				glasses++;
-			}
-
-			else {
-				loose();
-				life--;
-			}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
+
+	//		if (numQuestion == 8) {
+	//			GameOverWin();
+	//			break;
+	//		}
 
 
-			// 10
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 10 ] Вопрос: Какая из следующих структур данных является неизменяемой в языке программирования Python?\n";
-			std::cout << "[ A ] Список\t[ B ] Кортеж\n[ C ] Множество\t[ D ] Словарь\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'b' or quiz == 'B') {
-				win();
-				glasses++;
-			}
+	//		// 9
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 9 ] Вопрос: Что такое Docker?\n";
+	//		std::cout << "[ A ] Виртуальная машина\t[ B ] Контейнеризация приложений\n[ C ] Облачное хранилище данных\t[ D ] Язык программирования\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'd' or quiz == 'D') {
+	//			win();
+	//			glasses++;
+	//		}
 
-			else {
-				loose();
-				life--;
-			}
-
-
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			if (numQuestion == 10) {
-				GameOverWin();
-				break;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
 
-			// 11
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 11 ] Вопрос: Какая из перечисленных операций относится к унарным операциям в программировании?\n";
-			std::cout << "[ A ] Сложение \t[ B ] Умножение\n[ C ] Инкремент\t[ D ] Деление\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'c' or quiz == 'C') {
-				win();
-				glasses++;
-			}
+	//		// 10
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 10 ] Вопрос: Какая из следующих структур данных является неизменяемой в языке программирования Python?\n";
+	//		std::cout << "[ A ] Список\t[ B ] Кортеж\n[ C ] Множество\t[ D ] Словарь\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'b' or quiz == 'B') {
+	//			win();
+	//			glasses++;
+	//		}
 
-			else {
-				loose();
-				life--;
-			}
-
-
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
-
-			// 12
-			std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
-			std::cout << "\n[ 12 ] Вопрос: Какая функция управляет выполнением программы в операционной системе?\n";
-			std::cout << "[ A ] Ядро    \t[ B ] Драйвер\n[ C ] Оболочка\t[ D ] Процессор\n";
-			std::cout << "[ + ] Выбрать ответ: ";
-			std::cin >> quiz;
-			if (quiz == 'a' or quiz == 'A') {
-				win();
-				glasses++;
-			}
-
-			else {
-				loose();
-				life--;
-			}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
 
-			if (life == 0) {
-				GameOverLoose();
-				break;
-			}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
-			GameOverWin();
-			break;
-		}
 
-		else if (choose == 2) {
-			while (true)
-			{
-				std::cout << "\n[ 1 ] Редактирование имя игрока;\n[ 2 ] Редактирование вопросов в игре;\n[ 3 ] Редактирование цвет интерфейса;\n[ 4 ] Вернуться в меню;\n";
-				int chooseTools;
-				std::cin >> chooseTools;
-				if (chooseTools == 1) {
-					std::cout << "\nВведите имя: ";
-					std::cin >> name;
-				}
+	//		if (numQuestion == 10) {
+	//			GameOverWin();
+	//			break;
+	//		}
 
-				else if (chooseTools == 2) {
-					std::cout << "\nВведите количество вопросов:\n[ 1 ] 8;\n[ 2 ] 10;\n[ 3 ] 12;\n";
-					int chooseQuestion;
-					std::cin >> chooseQuestion;
-					switch (chooseQuestion)
-					{
-					case 1:
-						numQuestion = 8;
-						break;
-					case 2:
-						numQuestion = 10;
-						break;
-					case 3:
-						numQuestion = 12;
-						break;
-					default:
-						std::cout << "Ошибка ввода!\n\n";
-						break;
-					}
-				}
 
-				else if (chooseTools == 3) {
-					std::cout << "\nВведите цвет:\n[ 1 ] Голубой;\n[ 2 ] Синий;\n[ 3 ] Зеленый;\n[ 4 ] Красный;\n[ 5 ] Белый;\n";
-					int chooseColor;
-					std::cin >> chooseColor;
-					switch (chooseColor)
-					{
-					case 1:
-						system("color 3");
-						break;
-					case 2:
-						system("color 1");
-						break;
-					case 3:
-						system("color 2");
-						break;
-					case 4:
-						system("color 4");
-						break;
-					case 5:
-						system("color 7");
-						break;
-					default:
-						std::cout << "Ошибка ввода!\n\n";
-						break;
-					}
-				}
+	//		// 11
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 11 ] Вопрос: Какая из перечисленных операций относится к унарным операциям в программировании?\n";
+	//		std::cout << "[ A ] Сложение \t[ B ] Умножение\n[ C ] Инкремент\t[ D ] Деление\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'c' or quiz == 'C') {
+	//			win();
+	//			glasses++;
+	//		}
 
-				else if (chooseTools == 4) {
-					break;
-				}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
 
-				else std::cout << "Ошибка ввода!\n\n";
-			}
-		}
 
-		else if (choose == 3) {
-			std::cout << "- Игрок получает очки за правильный ответ на вопрос;\n- Игрок проходит дальше за правильный ответ;\n- Игрок теряет жизнь при неправильном ответе.\n\n";
-		}
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
 
-		else if (choose == 4) {
-			break;
-		}
+	//		// 12
+	//		std::cout << "\n\n[ + ] Игрок: " << name << " |  жизни: " << life << " | очки: " << glasses;
+	//		std::cout << "\n[ 12 ] Вопрос: Какая функция управляет выполнением программы в операционной системе?\n";
+	//		std::cout << "[ A ] Ядро    \t[ B ] Драйвер\n[ C ] Оболочка\t[ D ] Процессор\n";
+	//		std::cout << "[ + ] Выбрать ответ: ";
+	//		std::cin >> quiz;
+	//		if (quiz == 'a' or quiz == 'A') {
+	//			win();
+	//			glasses++;
+	//		}
 
-		else std::cout << "Ошибка ввода!\n\n";
-	}
+	//		else {
+	//			loose();
+	//			life--;
+	//		}
+
+
+	//		if (life == 0) {
+	//			GameOverLoose();
+	//			break;
+	//		}
+
+	//		GameOverWin();
+	//		break;
+	//	}
+
+	//	else if (choose == 2) {
+	//		while (true)
+	//		{
+	//			std::cout << "\n[ 1 ] Редактирование имя игрока;\n[ 2 ] Редактирование вопросов в игре;\n[ 3 ] Редактирование цвет интерфейса;\n[ 4 ] Вернуться в меню;\n";
+	//			int chooseTools;
+	//			std::cin >> chooseTools;
+	//			if (chooseTools == 1) {
+	//				std::cout << "\nВведите имя: ";
+	//				std::cin >> name;
+	//			}
+
+	//			else if (chooseTools == 2) {
+	//				std::cout << "\nВведите количество вопросов:\n[ 1 ] 8;\n[ 2 ] 10;\n[ 3 ] 12;\n";
+	//				int chooseQuestion;
+	//				std::cin >> chooseQuestion;
+	//				switch (chooseQuestion)
+	//				{
+	//				case 1:
+	//					numQuestion = 8;
+	//					break;
+	//				case 2:
+	//					numQuestion = 10;
+	//					break;
+	//				case 3:
+	//					numQuestion = 12;
+	//					break;
+	//				default:
+	//					std::cout << "Ошибка ввода!\n\n";
+	//					break;
+	//				}
+	//			}
+
+	//			else if (chooseTools == 3) {
+	//				std::cout << "\nВведите цвет:\n[ 1 ] Голубой;\n[ 2 ] Синий;\n[ 3 ] Зеленый;\n[ 4 ] Красный;\n[ 5 ] Белый;\n";
+	//				int chooseColor;
+	//				std::cin >> chooseColor;
+	//				switch (chooseColor)
+	//				{
+	//				case 1:
+	//					system("color 3");
+	//					break;
+	//				case 2:
+	//					system("color 1");
+	//					break;
+	//				case 3:
+	//					system("color 2");
+	//					break;
+	//				case 4:
+	//					system("color 4");
+	//					break;
+	//				case 5:
+	//					system("color 7");
+	//					break;
+	//				default:
+	//					std::cout << "Ошибка ввода!\n\n";
+	//					break;
+	//				}
+	//			}
+
+	//			else if (chooseTools == 4) {
+	//				break;
+	//			}
+
+	//			else std::cout << "Ошибка ввода!\n\n";
+	//		}
+	//	}
+
+	//	else if (choose == 3) {
+	//		std::cout << "- Игрок получает очки за правильный ответ на вопрос;\n- Игрок проходит дальше за правильный ответ;\n- Игрок теряет жизнь при неправильном ответе.\n\n";
+	//	}
+
+	//	else if (choose == 4) {
+	//		break;
+	//	}
+
+	//	else std::cout << "Ошибка ввода!\n\n";
+	//}
 
 	
 
