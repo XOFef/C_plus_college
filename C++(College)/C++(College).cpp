@@ -457,21 +457,34 @@ int main()
 		std::cout << "\n";
 		if (type == 1) {
 			for (int i = 0; i < length; i++) {
-				std::string square(length, texture);
-				std::cout << square << std::endl;
+				for (int j = 0; j < length; j++)
+				{
+					std::cout << texture << ' ';
+				}
+				std::cout << "\n";
 			}
 		}
 		else if (type == 2) {
 			char i = ' ';
-			std::string nul(length - 2, i);
-			std::string square(length, texture);
-			std::string square_low(length, texture);
-			std::cout << square << std::endl;
+			std::string nul(length + (length-3), i);
+			for (int i = 0; i < 1; i++) {
+				for (int j = 0; j < length; j++)
+				{
+					std::cout << texture << ' ';
+				}
+				std::cout << "\n";
+			}
 			for (int i = 0; i < length-2; i++)
 			{
 				std::cout << texture << nul << texture <<std::endl;
 			}
-			std::cout << square << std::endl;
+			for (int i = 0; i < 1; i++) {
+				for (int j = 0; j < length; j++)
+				{
+					std::cout << texture << ' ';
+				}
+				std::cout << "\n";
+			}
 		}
 	}
 
