@@ -405,7 +405,7 @@ int main()
 	// Задание 11, 13-19
 
 	int choose, length;
-	char texture;
+	char texture, i = ' ';;
 	std::cout << "[ + ] Программа - “Геометрические фигуры”\n\n";
 	std::cout << "[ 1 ] Линия\n[ 2 ] Квадрат\n[ 3 ] Прямоугольник\n[ 4 ] Треугольник\n[ 5 ] Решетка\n[ 6 ] Крестик\n[ 7 ] Плюс\n[ 8 ] Ромб\n\n[ + ] Выберите фигуру: ";
 	std::cin >> choose;
@@ -465,8 +465,7 @@ int main()
 			}
 		}
 		else if (type == 2) {
-			char i = ' ';
-			std::string nul(length + (length-3), i);
+			std::string nul(length + (length - 3), i);
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < length; j++)
 				{
@@ -474,9 +473,9 @@ int main()
 				}
 				std::cout << "\n";
 			}
-			for (int i = 0; i < length-2; i++)
+			for (int i = 0; i < length - 2; i++)
 			{
-				std::cout << texture << nul << texture <<std::endl;
+				std::cout << texture << nul << texture << std::endl;
 			}
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < length; j++)
@@ -490,7 +489,52 @@ int main()
 
 
 	// Rectangle
-
+	else if (choose == 3) {
+			std::cout << "\n[ + ] Фигура: “Прямоугольник”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
+			int type, Width, Height;
+			std::cin >> type;
+			if (type < 0 or type > 2) {
+				std::cout << "Ошибка ввода!";
+				exit;
+			}
+			std::cout << "[ + ] Ширина:  ";
+			std::cin >> Width;
+			std::cout << "[ + ] Высота:  ";
+			std::cin >> Height;
+			std::cout << "[ + ] Текстура: ";
+			std::cin >> texture;
+			std::cout << "\n";
+			if (type == 1) {
+				for (int i = 0; i < Height; i++) {
+					for (int j = 0; j < Width; j++)
+					{
+						std::cout << texture << ' ';
+					}
+					std::cout << "\n";
+				}
+			}
+			else if (type == 2) {
+				std::string nul(Width + (Width - 3), i);
+				for (int i = 0; i < 1; i++) {
+					for (int j = 0; j < Width; j++)
+					{
+						std::cout << texture << ' ';
+					}
+					std::cout << "\n";
+				}
+				for (int i = 0; i < Height - 2; i++)
+				{
+					std::cout << texture << nul << texture << std::endl;
+				}
+				for (int i = 0; i < 1; i++) {
+					for (int j = 0; j < Width; j++)
+					{
+						std::cout << texture << ' ';
+					}
+					std::cout << "\n";
+				}
+			}
+	}
 
 
 
