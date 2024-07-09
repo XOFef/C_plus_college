@@ -537,6 +537,53 @@ int main()
 	}
 
 
+	// Triangle
+	else if (choose == 4) {
+		std::cout << "\n[ + ] Фигура: “Треугольник”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
+		int type, Height;
+		std::cin >> type;
+		if (type < 0 or type > 2) {
+			std::cout << "Ошибка ввода!";
+			exit;
+		}
+		std::cout << "[ + ] Высота:  ";
+		std::cin >> Height;
+		std::cout << "[ + ] Текстура: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		if (type == 1) {
+			for (int i = 1; i <= Height; i++) {
+				for (int j = 1; j <= Height - i; j++) {
+					std::cout << " ";
+				}
+				for (int k = 1; k <= 2 * i - 1; k++) {
+					std::cout << texture;
+				}
+				std::cout << std::endl;
+			}
+		}
+		else if (type == 2) {
+			for (int i = 1; i <= Height; i++) {
+				for (int j = 1; j <= Height - i; j++) {
+					std::cout << " ";
+				}
+				if (i == 1 || i == Height) {
+					for (int k = 1; k <= 2 * i - 1; k++) {
+						std::cout << texture;
+					}
+				}
+				else {
+					std::cout << texture;
+					for (int k = 1; k <= 2 * i - 3; k++) {
+						std::cout << " ";
+					}
+					std::cout << texture;
+				}
+				std::cout << std::endl;
+			}
+		}
+	}
+
 
 
 
