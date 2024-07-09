@@ -585,6 +585,29 @@ int main()
 	}
 
 
+	// Grid
+	else if (choose == 5) {
+		std::cout << "\n[ + ] Фигура: “Решетка”\n\n";
+		int Size;
+		std::cout << "[ + ] Размер:  ";
+		std::cin >> Size;
+		std::cout << "[ + ] Текстура: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		std::string nul(Size, texture);
+
+		for (int i = 0; i < Size; i++) {
+			for (int j = 0; j < Size; j++) {
+				if (j % 2 == 0 and i % 2 == 0) {
+					std::cout << "  ";
+					continue;
+				}
+				std::cout << texture << " ";
+
+			}
+			std::cout << std::endl;
+		}
+	}
 
 
 
