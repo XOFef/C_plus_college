@@ -594,8 +594,6 @@ int main()
 		std::cout << "[ + ] Текстура: ";
 		std::cin >> texture;
 		std::cout << "\n";
-		std::string nul(Size, texture);
-
 		for (int i = 0; i < Size; i++) {
 			for (int j = 0; j < Size; j++) {
 				if (j % 2 == 0 and i % 2 == 0) {
@@ -609,6 +607,96 @@ int main()
 		}
 	}
 
+
+	// Cross
+	else if (choose == 6) {
+		std::cout << "\n[ + ] Фигура: “Крестик”\n\n";
+		int Size;
+		std::cout << "[ + ] Размер:  ";
+		std::cin >> Size;
+		std::cout << "[ + ] Текстура: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		for (int i = 0; i < Size; i++) {
+			for (int j = 0; j < Size; j++) {
+				if (i == j || i + j == Size - 1) {
+					std::cout << texture << "     ";
+				}
+				else {
+					std::cout << "      ";
+				}
+			}
+			std::cout << std::endl;
+		}
+	}
+
+
+	// Plus
+	else if (choose == 7) {
+		std::cout << "\n[ + ] Фигура: “Плюс”\n\n";
+		int Size;
+		std::cout << "[ + ] Размер:  ";
+		std::cin >> Size;
+		std::cout << "[ + ] Текстура: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		std::string Plus(Size, texture);
+		std::string nul(Size / 2, i);
+		for (int i = 0; i < Size; i++) {
+			if (Size / 2 == i) {
+				std::cout << Plus << std::endl;
+				continue;
+			}
+			for (int j = 0; j < Size; j++) {
+				if (Size / 2 == j+1) {
+					std::cout << nul << texture;
+					continue;
+				}	
+			}
+			std::cout << std::endl;
+		}
+	}
+
+
+	// Rhomb
+	else if (choose == 8) {
+		std::cout << "\n[ + ] Фигура: “Ромб”\n\n";
+		int Size;
+		std::cout << "[ + ] Размер:  ";
+		std::cin >> Size;
+		std::cout << "[ + ] Текстура: ";
+		std::cin >> texture;
+		std::cout << "\n";
+		for (int i = 0; i < Size; i++) {
+			for (int j = 0; j < Size - i - 1; j++) {
+				std::cout << " ";
+			}
+			for (int j = 0; j < 2 * i + 1; j++) {
+				if (j == 0 || j == 2 * i || i == Size - 1) {
+					std::cout << texture;
+				}
+				else {
+					std::cout << " ";
+				}
+			}
+			std::cout << std::endl;
+		}
+
+		for (int i = Size - 2; i >= 0; i--) {
+			for (int j = 0; j < Size - i - 1; j++) {
+				std::cout << " ";
+			}
+			for (int j = 0; j < 2 * i + 1; j++) {
+				if (j == 0 || j == 2 * i || i == Size - 1) {
+					std::cout << texture;
+				}
+				else {
+					std::cout << " ";
+				}
+			}
+			std::cout << std::endl;
+		}
+	}
 
 
 	else std::cout << "Ошибка ввода!";
