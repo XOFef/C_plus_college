@@ -404,302 +404,302 @@ int main()
 
 	// Задание 11, 13-19
 
-	int choose, length;
-	char texture, i = ' ';;
-	std::cout << "[ + ] Программа - “Геометрические фигуры”\n\n";
-	std::cout << "[ 1 ] Линия\n[ 2 ] Квадрат\n[ 3 ] Прямоугольник\n[ 4 ] Треугольник\n[ 5 ] Решетка\n[ 6 ] Крестик\n[ 7 ] Плюс\n[ 8 ] Ромб\n\n[ + ] Выберите фигуру: ";
-	std::cin >> choose;
+	//int choose, length;
+	//char texture, i = ' ';;
+	//std::cout << "[ + ] Программа - “Геометрические фигуры”\n\n";
+	//std::cout << "[ 1 ] Линия\n[ 2 ] Квадрат\n[ 3 ] Прямоугольник\n[ 4 ] Треугольник\n[ 5 ] Решетка\n[ 6 ] Крестик\n[ 7 ] Плюс\n[ 8 ] Ромб\n\n[ + ] Выберите фигуру: ";
+	//std::cin >> choose;
 
-	// Line
-	if (choose == 1) {
+	//// Line
+	//if (choose == 1) {
 
-		std::cout << "\n[ + ] Фигура: “Линия”\n\n[ 1 ] Горизонтальная\n[ 2 ] Вертикальная \n\nВыберите тип : ";
-		int position, i = 0;
-		std::cin >> position;
-		if (position < 0 or position > 2) {
-			std::cout << "Ошибка ввода!";
-			exit;
-		}
-		std::cout << "[ + ] Длина линии: ";
-		std::cin >> length;
-		std::cout << "[ + ] Текстура линии: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		if (position == 1) {
-			while (i < length)
-			{
-				std::cout << texture;
-				i++;
-			}
-		}
-		else if (position == 2) {
-			while (i < length) {
-				std::cout << "\t" << texture << std::endl;
-				i++;
-			}
-		}
-	}
-
-
-	// Square
-	else if (choose == 2) {
-		std::cout << "\n[ + ] Фигура: “Квадрат”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
-		int type, length;
-		std::cin >> type;
-		if (type < 0 or type > 2) {
-			std::cout << "Ошибка ввода!";
-			exit;
-		}
-		std::cout << "[ + ] Размер:  ";
-		std::cin >> length;
-		std::cout << "[ + ] Текстура: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		if (type == 1) {
-			for (int i = 0; i < length; i++) {
-				for (int j = 0; j < length; j++)
-				{
-					std::cout << texture << ' ';
-				}
-				std::cout << "\n";
-			}
-		}
-		else if (type == 2) {
-			std::string nul(length + (length - 3), i);
-			for (int i = 0; i < 1; i++) {
-				for (int j = 0; j < length; j++)
-				{
-					std::cout << texture << ' ';
-				}
-				std::cout << "\n";
-			}
-			for (int i = 0; i < length - 2; i++)
-			{
-				std::cout << texture << nul << texture << std::endl;
-			}
-			for (int i = 0; i < 1; i++) {
-				for (int j = 0; j < length; j++)
-				{
-					std::cout << texture << ' ';
-				}
-				std::cout << "\n";
-			}
-		}
-	}
+	//	std::cout << "\n[ + ] Фигура: “Линия”\n\n[ 1 ] Горизонтальная\n[ 2 ] Вертикальная \n\nВыберите тип : ";
+	//	int position, i = 0;
+	//	std::cin >> position;
+	//	if (position < 0 or position > 2) {
+	//		std::cout << "Ошибка ввода!";
+	//		exit;
+	//	}
+	//	std::cout << "[ + ] Длина линии: ";
+	//	std::cin >> length;
+	//	std::cout << "[ + ] Текстура линии: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	if (position == 1) {
+	//		while (i < length)
+	//		{
+	//			std::cout << texture;
+	//			i++;
+	//		}
+	//	}
+	//	else if (position == 2) {
+	//		while (i < length) {
+	//			std::cout << "\t" << texture << std::endl;
+	//			i++;
+	//		}
+	//	}
+	//}
 
 
-	// Rectangle
-	else if (choose == 3) {
-			std::cout << "\n[ + ] Фигура: “Прямоугольник”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
-			int type, Width, Height;
-			std::cin >> type;
-			if (type < 0 or type > 2) {
-				std::cout << "Ошибка ввода!";
-				exit;
-			}
-			std::cout << "[ + ] Ширина:  ";
-			std::cin >> Width;
-			std::cout << "[ + ] Высота:  ";
-			std::cin >> Height;
-			std::cout << "[ + ] Текстура: ";
-			std::cin >> texture;
-			std::cout << "\n";
-			if (type == 1) {
-				for (int i = 0; i < Height; i++) {
-					for (int j = 0; j < Width; j++)
-					{
-						std::cout << texture << ' ';
-					}
-					std::cout << "\n";
-				}
-			}
-			else if (type == 2) {
-				std::string nul(Width + (Width - 3), i);
-				for (int i = 0; i < 1; i++) {
-					for (int j = 0; j < Width; j++)
-					{
-						std::cout << texture << ' ';
-					}
-					std::cout << "\n";
-				}
-				for (int i = 0; i < Height - 2; i++)
-				{
-					std::cout << texture << nul << texture << std::endl;
-				}
-				for (int i = 0; i < 1; i++) {
-					for (int j = 0; j < Width; j++)
-					{
-						std::cout << texture << ' ';
-					}
-					std::cout << "\n";
-				}
-			}
-	}
+	//// Square
+	//else if (choose == 2) {
+	//	std::cout << "\n[ + ] Фигура: “Квадрат”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
+	//	int type, length;
+	//	std::cin >> type;
+	//	if (type < 0 or type > 2) {
+	//		std::cout << "Ошибка ввода!";
+	//		exit;
+	//	}
+	//	std::cout << "[ + ] Размер:  ";
+	//	std::cin >> length;
+	//	std::cout << "[ + ] Текстура: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	if (type == 1) {
+	//		for (int i = 0; i < length; i++) {
+	//			for (int j = 0; j < length; j++)
+	//			{
+	//				std::cout << texture << ' ';
+	//			}
+	//			std::cout << "\n";
+	//		}
+	//	}
+	//	else if (type == 2) {
+	//		std::string nul(length + (length - 3), i);
+	//		for (int i = 0; i < 1; i++) {
+	//			for (int j = 0; j < length; j++)
+	//			{
+	//				std::cout << texture << ' ';
+	//			}
+	//			std::cout << "\n";
+	//		}
+	//		for (int i = 0; i < length - 2; i++)
+	//		{
+	//			std::cout << texture << nul << texture << std::endl;
+	//		}
+	//		for (int i = 0; i < 1; i++) {
+	//			for (int j = 0; j < length; j++)
+	//			{
+	//				std::cout << texture << ' ';
+	//			}
+	//			std::cout << "\n";
+	//		}
+	//	}
+	//}
 
 
-	// Triangle
-	else if (choose == 4) {
-		std::cout << "\n[ + ] Фигура: “Треугольник”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
-		int type, Height;
-		std::cin >> type;
-		if (type < 0 or type > 2) {
-			std::cout << "Ошибка ввода!";
-			exit;
-		}
-		std::cout << "[ + ] Высота:  ";
-		std::cin >> Height;
-		std::cout << "[ + ] Текстура: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		if (type == 1) {
-			for (int i = 1; i <= Height; i++) {
-				for (int j = 1; j <= Height - i; j++) {
-					std::cout << " ";
-				}
-				for (int k = 1; k <= 2 * i - 1; k++) {
-					std::cout << texture;
-				}
-				std::cout << std::endl;
-			}
-		}
-		else if (type == 2) {
-			for (int i = 1; i <= Height; i++) {
-				for (int j = 1; j <= Height - i; j++) {
-					std::cout << " ";
-				}
-				if (i == 1 || i == Height) {
-					for (int k = 1; k <= 2 * i - 1; k++) {
-						std::cout << texture;
-					}
-				}
-				else {
-					std::cout << texture;
-					for (int k = 1; k <= 2 * i - 3; k++) {
-						std::cout << " ";
-					}
-					std::cout << texture;
-				}
-				std::cout << std::endl;
-			}
-		}
-	}
+	//// Rectangle
+	//else if (choose == 3) {
+	//		std::cout << "\n[ + ] Фигура: “Прямоугольник”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
+	//		int type, Width, Height;
+	//		std::cin >> type;
+	//		if (type < 0 or type > 2) {
+	//			std::cout << "Ошибка ввода!";
+	//			exit;
+	//		}
+	//		std::cout << "[ + ] Ширина:  ";
+	//		std::cin >> Width;
+	//		std::cout << "[ + ] Высота:  ";
+	//		std::cin >> Height;
+	//		std::cout << "[ + ] Текстура: ";
+	//		std::cin >> texture;
+	//		std::cout << "\n";
+	//		if (type == 1) {
+	//			for (int i = 0; i < Height; i++) {
+	//				for (int j = 0; j < Width; j++)
+	//				{
+	//					std::cout << texture << ' ';
+	//				}
+	//				std::cout << "\n";
+	//			}
+	//		}
+	//		else if (type == 2) {
+	//			std::string nul(Width + (Width - 3), i);
+	//			for (int i = 0; i < 1; i++) {
+	//				for (int j = 0; j < Width; j++)
+	//				{
+	//					std::cout << texture << ' ';
+	//				}
+	//				std::cout << "\n";
+	//			}
+	//			for (int i = 0; i < Height - 2; i++)
+	//			{
+	//				std::cout << texture << nul << texture << std::endl;
+	//			}
+	//			for (int i = 0; i < 1; i++) {
+	//				for (int j = 0; j < Width; j++)
+	//				{
+	//					std::cout << texture << ' ';
+	//				}
+	//				std::cout << "\n";
+	//			}
+	//		}
+	//}
 
 
-	// Grid
-	else if (choose == 5) {
-		std::cout << "\n[ + ] Фигура: “Решетка”\n\n";
-		int Size;
-		std::cout << "[ + ] Размер:  ";
-		std::cin >> Size;
-		std::cout << "[ + ] Текстура: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		for (int i = 0; i < Size; i++) {
-			for (int j = 0; j < Size; j++) {
-				if (j % 2 == 0 and i % 2 == 0) {
-					std::cout << "  ";
-					continue;
-				}
-				std::cout << texture << " ";
-
-			}
-			std::cout << std::endl;
-		}
-	}
-
-
-	// Cross
-	else if (choose == 6) {
-		std::cout << "\n[ + ] Фигура: “Крестик”\n\n";
-		int Size;
-		std::cout << "[ + ] Размер:  ";
-		std::cin >> Size;
-		std::cout << "[ + ] Текстура: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		for (int i = 0; i < Size; i++) {
-			for (int j = 0; j < Size; j++) {
-				if (i == j || i + j == Size - 1) {
-					std::cout << texture << "     ";
-				}
-				else {
-					std::cout << "      ";
-				}
-			}
-			std::cout << std::endl;
-		}
-	}
-
-
-	// Plus
-	else if (choose == 7) {
-		std::cout << "\n[ + ] Фигура: “Плюс”\n\n";
-		int Size;
-		std::cout << "[ + ] Размер:  ";
-		std::cin >> Size;
-		std::cout << "[ + ] Текстура: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		std::string Plus(Size, texture);
-		std::string nul(Size / 2, i);
-		for (int i = 0; i < Size; i++) {
-			if (Size / 2 == i) {
-				std::cout << Plus << std::endl;
-				continue;
-			}
-			for (int j = 0; j < Size; j++) {
-				if (Size / 2 == j+1) {
-					std::cout << nul << texture;
-					continue;
-				}	
-			}
-			std::cout << std::endl;
-		}
-	}
+	//// Triangle
+	//else if (choose == 4) {
+	//	std::cout << "\n[ + ] Фигура: “Треугольник”\n\n[ 1 ] Заполненный\n[ 2 ] Пустой \n\nВыберите тип : ";
+	//	int type, Height;
+	//	std::cin >> type;
+	//	if (type < 0 or type > 2) {
+	//		std::cout << "Ошибка ввода!";
+	//		exit;
+	//	}
+	//	std::cout << "[ + ] Высота:  ";
+	//	std::cin >> Height;
+	//	std::cout << "[ + ] Текстура: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	if (type == 1) {
+	//		for (int i = 1; i <= Height; i++) {
+	//			for (int j = 1; j <= Height - i; j++) {
+	//				std::cout << " ";
+	//			}
+	//			for (int k = 1; k <= 2 * i - 1; k++) {
+	//				std::cout << texture;
+	//			}
+	//			std::cout << std::endl;
+	//		}
+	//	}
+	//	else if (type == 2) {
+	//		for (int i = 1; i <= Height; i++) {
+	//			for (int j = 1; j <= Height - i; j++) {
+	//				std::cout << " ";
+	//			}
+	//			if (i == 1 || i == Height) {
+	//				for (int k = 1; k <= 2 * i - 1; k++) {
+	//					std::cout << texture;
+	//				}
+	//			}
+	//			else {
+	//				std::cout << texture;
+	//				for (int k = 1; k <= 2 * i - 3; k++) {
+	//					std::cout << " ";
+	//				}
+	//				std::cout << texture;
+	//			}
+	//			std::cout << std::endl;
+	//		}
+	//	}
+	//}
 
 
-	// Rhomb
-	else if (choose == 8) {
-		std::cout << "\n[ + ] Фигура: “Ромб”\n\n";
-		int Size;
-		std::cout << "[ + ] Размер:  ";
-		std::cin >> Size;
-		std::cout << "[ + ] Текстура: ";
-		std::cin >> texture;
-		std::cout << "\n";
-		for (int i = 0; i < Size; i++) {
-			for (int j = 0; j < Size - i - 1; j++) {
-				std::cout << " ";
-			}
-			for (int j = 0; j < 2 * i + 1; j++) {
-				if (j == 0 || j == 2 * i || i == Size - 1) {
-					std::cout << texture;
-				}
-				else {
-					std::cout << " ";
-				}
-			}
-			std::cout << std::endl;
-		}
+	//// Grid
+	//else if (choose == 5) {
+	//	std::cout << "\n[ + ] Фигура: “Решетка”\n\n";
+	//	int Size;
+	//	std::cout << "[ + ] Размер:  ";
+	//	std::cin >> Size;
+	//	std::cout << "[ + ] Текстура: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	for (int i = 0; i < Size; i++) {
+	//		for (int j = 0; j < Size; j++) {
+	//			if (j % 2 == 0 and i % 2 == 0) {
+	//				std::cout << "  ";
+	//				continue;
+	//			}
+	//			std::cout << texture << " ";
 
-		for (int i = Size - 2; i >= 0; i--) {
-			for (int j = 0; j < Size - i - 1; j++) {
-				std::cout << " ";
-			}
-			for (int j = 0; j < 2 * i + 1; j++) {
-				if (j == 0 || j == 2 * i || i == Size - 1) {
-					std::cout << texture;
-				}
-				else {
-					std::cout << " ";
-				}
-			}
-			std::cout << std::endl;
-		}
-	}
+	//		}
+	//		std::cout << std::endl;
+	//	}
+	//}
 
 
-	else std::cout << "Ошибка ввода!";
+	//// Cross
+	//else if (choose == 6) {
+	//	std::cout << "\n[ + ] Фигура: “Крестик”\n\n";
+	//	int Size;
+	//	std::cout << "[ + ] Размер:  ";
+	//	std::cin >> Size;
+	//	std::cout << "[ + ] Текстура: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	for (int i = 0; i < Size; i++) {
+	//		for (int j = 0; j < Size; j++) {
+	//			if (i == j || i + j == Size - 1) {
+	//				std::cout << texture << "     ";
+	//			}
+	//			else {
+	//				std::cout << "      ";
+	//			}
+	//		}
+	//		std::cout << std::endl;
+	//	}
+	//}
+
+
+	//// Plus
+	//else if (choose == 7) {
+	//	std::cout << "\n[ + ] Фигура: “Плюс”\n\n";
+	//	int Size;
+	//	std::cout << "[ + ] Размер:  ";
+	//	std::cin >> Size;
+	//	std::cout << "[ + ] Текстура: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	std::string Plus(Size, texture);
+	//	std::string nul(Size / 2, i);
+	//	for (int i = 0; i < Size; i++) {
+	//		if (Size / 2 == i) {
+	//			std::cout << Plus << std::endl;
+	//			continue;
+	//		}
+	//		for (int j = 0; j < Size; j++) {
+	//			if (Size / 2 == j+1) {
+	//				std::cout << nul << texture;
+	//				continue;
+	//			}	
+	//		}
+	//		std::cout << std::endl;
+	//	}
+	//}
+
+
+	//// Rhomb
+	//else if (choose == 8) {
+	//	std::cout << "\n[ + ] Фигура: “Ромб”\n\n";
+	//	int Size;
+	//	std::cout << "[ + ] Размер:  ";
+	//	std::cin >> Size;
+	//	std::cout << "[ + ] Текстура: ";
+	//	std::cin >> texture;
+	//	std::cout << "\n";
+	//	for (int i = 0; i < Size; i++) {
+	//		for (int j = 0; j < Size - i - 1; j++) {
+	//			std::cout << " ";
+	//		}
+	//		for (int j = 0; j < 2 * i + 1; j++) {
+	//			if (j == 0 || j == 2 * i || i == Size - 1) {
+	//				std::cout << texture;
+	//			}
+	//			else {
+	//				std::cout << " ";
+	//			}
+	//		}
+	//		std::cout << std::endl;
+	//	}
+
+	//	for (int i = Size - 2; i >= 0; i--) {
+	//		for (int j = 0; j < Size - i - 1; j++) {
+	//			std::cout << " ";
+	//		}
+	//		for (int j = 0; j < 2 * i + 1; j++) {
+	//			if (j == 0 || j == 2 * i || i == Size - 1) {
+	//				std::cout << texture;
+	//			}
+	//			else {
+	//				std::cout << " ";
+	//			}
+	//		}
+	//		std::cout << std::endl;
+	//	}
+	//}
+
+
+	//else std::cout << "Ошибка ввода!";
 
 
 
@@ -1063,7 +1063,88 @@ int main()
 	//	else std::cout << "Ошибка ввода!\n\n";
 	//}
 
+
+
+	// Задание 20
 	
+	short arrShort[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int arrInt[10] = { 1, 20, 32, 4, 1, 2, 2, 54, 23, 0 };
+	long arrLong[10] = { 10,20,30,40,50,60,70,80,90,100 };
+	float arrFloat[10] = { 1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,1.11 };
+	double arrDouble[10] = { 1.11,1.12,1.13,1.14,1.15,1.16,1.17,1.18,1.19,1.21 };
+	char arrChar[10] = { 'a','b','c','d','f','g','e','i','s','z' };
+	bool arrBool[10] = { 0,1,0,1,0,1,0,0,1,0 };
+	std::string arrString[10] = { "he","ll","o ","wo","rl","d ","ks","54","isp","11-37" };
+	
+	std::cout << "[ + ] Массив SHORT:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrShort [ " << i << " ]	| значение: " << arrShort[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив INT:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrInt [ " << i << " ]	| значение: " << arrInt[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив LONG:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrLong [ " << i << " ]	| значение: " << arrLong[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив FLOAT:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrFloat [ " << i << " ]	| значение: " << arrFloat[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив DOUBLE:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrDouble [ " << i << " ]	| значение: " << arrDouble[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив CHAR:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrChar [ " << i << " ]	| значение: " << arrChar[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив BOOL:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrBool [ " << i << " ]	| значение: " << arrBool[i] << std::endl;
+	}
+	std::cout << "\n[ + ] Массив STRING:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << "[ + ] arrString [ " << i << " ]	| значение: " << arrString[i] << std::endl;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	system("pause>nul");
 	return 0;
