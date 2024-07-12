@@ -1,12 +1,3 @@
 ﻿  C++(College).cpp
 C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(21,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,25): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,29): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,33): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,37): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,45): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,49): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,53): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,57): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(1073,61): warning C4305: инициализация: усечение из "double" в "float"
   C++(College).vcxproj -> C:\Users\reter\source\repos\C++(College)\x64\Debug\C++(College).exe

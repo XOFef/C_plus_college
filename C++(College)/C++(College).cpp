@@ -1067,7 +1067,7 @@ int main()
 
 	// Задание 20
 	
-	short arrShort[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	/*short arrShort[10] = { 1,2,3,4,5,6,7,8,9,10 };
 	int arrInt[10] = { 1, 20, 32, 4, 1, 2, 2, 54, 23, 0 };
 	long arrLong[10] = { 10,20,30,40,50,60,70,80,90,100 };
 	float arrFloat[10] = { 1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,1.11 };
@@ -1115,14 +1115,134 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		std::cout << "[ + ] arrString [ " << i << " ]	| значение: " << arrString[i] << std::endl;
+	}*/
+
+
+
+	// Задание 21
+
+	/*int arrOne[5];
+	int table = 1;
+	std::string lineShort = "-------------------------------------------------------------";
+	std::string lineLong = "-----------------------------------------------------------------";
+	std::string nameShort = "|   Число   |           Пример         |    Результат       |";
+	std::string nameLong = "|   Число    |           Пример           |      Результат      |";
+	for (int i = 0; i < 5; i++)
+	{
+		std::cin >> arrOne[i];
 	}
+	for (int i = 0; i < 1; i++)
+	{
+		std::cout << "\n| Таблица: " << table << std::endl;
+		if (arrOne[i] < 10) {
+			std::cout << lineShort << std::endl << nameShort << std::endl;
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "           |\n" << lineShort << "\n\n";
+		}
+		else {
+			std::cout << lineLong << std::endl << nameLong << std::endl;
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineLong << "\n\n";
+		}
+		table++;
+	}
+	for (int i = 1; i < 2; i++)
+	{
+		std::cout << "\n| Таблица: " << table << std::endl;
+		if (arrOne[i] < 10) {
+			std::cout << lineShort << std::endl << nameShort << std::endl;
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineShort << "\n\n";
+		}
+		else {
+			std::cout << lineLong << std::endl << nameLong << std::endl;
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineLong << "\n\n";
+		}
+		table++;
+	}
+	for (int i = 2; i < 3; i++)
+	{
+		std::cout << "\n| Таблица: " << table << std::endl;
+		if (arrOne[i] < 10) {
+			std::cout << lineShort << std::endl << nameShort << std::endl;
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "          |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "          |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "           |\n" << lineShort << "\n\n";
+		}
+		else {
+			std::cout << lineLong << std::endl << nameLong << std::endl;
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineLong << "\n\n";
+		}
+		table++;
+	}
+	for (int i = 3; i < 4; i++)
+	{
+		std::cout << "\n| Таблица: " << table << std::endl;
+		if (arrOne[i] < 10) {
+			std::cout << lineShort << std::endl << nameShort << std::endl;
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "          |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineShort << "\n\n";
+		}
+		else {
+			std::cout << lineLong << std::endl << nameLong << std::endl;
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineLong << "\n\n";
+		}
+		table++;
+	}
+	for (int i = 4; i < 5; i++)
+	{
+		std::cout << "\n| Таблица: " << table << std::endl;
+		if (arrOne[i] < 10) {
+			std::cout << lineShort << std::endl << nameShort << std::endl;
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "          |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "           |\n";
+			std::cout << lineShort << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineShort << "\n\n";
+		}
+		else {
+			std::cout << lineLong << std::endl << nameLong << std::endl;
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " + " << arrOne[i] << "          |        " << arrOne[i] + arrOne[i] << "           |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " - " << arrOne[i] << "          |        " << arrOne[i] - arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " / " << arrOne[i] << "          |        " << arrOne[i] / arrOne[i] << "            |\n";
+			std::cout << lineLong << "\n|     " << arrOne[i] << "     |           " << arrOne[i] << " * " << arrOne[i] << "          |        " << arrOne[i] * arrOne[i] << "          |\n" << lineLong << "\n\n";
+		}
+		table++;
+	}*/
 
 
 
-
-
-
-
+	// Задание 21
+	int arr[7];
+	int choose;
+	for (int i = 0; i < 7; i++)
+	{
+		std::cout << "[ + ] Инициализация | ячейка " << i << ": ";
+		std::cin >> arr[i];
+	}
+	for (;;)
+	{
+		std::cout << "\n\n[ + ] Настройки массива: \n\n[ 1 ] Сортировка по возрастанию\n[ 2 ] Сортировка по убыванию\n[ 3 ] Перемножить массив\n[ 4 ] Сложить массив\n[ 5 ] Разделить массив\n[ 6 ] Обнулить массив\n[ 7 ] Задать новые значения массиву\n\n[ + ] Ввод:";
+		std::cin >> choose;
+		if (choose < 0 or choose >= 8) std::cout << "\x1b[41mОшибка ввода!\x1b[0m";
+	}
 
 
 
