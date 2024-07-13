@@ -1229,9 +1229,9 @@ int main()
 
 
 
-	// Задание 21
-	int arr[7];
-	int choose;
+	// Задание 22
+	/*int arr[7];
+	int choose, index;
 	for (int i = 0; i < 7; i++)
 	{
 		std::cout << "[ + ] Инициализация | ячейка " << i << ": ";
@@ -1242,7 +1242,97 @@ int main()
 		std::cout << "\n\n[ + ] Настройки массива: \n\n[ 1 ] Сортировка по возрастанию\n[ 2 ] Сортировка по убыванию\n[ 3 ] Перемножить массив\n[ 4 ] Сложить массив\n[ 5 ] Разделить массив\n[ 6 ] Обнулить массив\n[ 7 ] Задать новые значения массиву\n\n[ + ] Ввод:";
 		std::cin >> choose;
 		if (choose < 0 or choose >= 8) std::cout << "\x1b[41mОшибка ввода!\x1b[0m";
-	}
+		else if (choose == 1) {
+			for (int i = 0; i < 7; i++)
+			{
+				for (int j = 0; j < 7; j++) {
+					if (arr[i] < arr[j]) {
+						index = arr[i];
+						arr[i] = arr[j];
+						arr[j] = index;
+					}
+				}
+			}
+		}
+		else if (choose == 2) {
+			for (int i = 0; i < 7; i++)
+			{
+				for (int j = 0; j < 7; j++) {
+					if (arr[i] > arr[j]) {
+						index = arr[i];
+						arr[i] = arr[j];
+						arr[j] = index;
+					}
+				}
+			}
+		}
+		else if (choose == 3) {
+			int number;
+			std::cout << "\nВвеедите значение: ";
+			std::cin >> number;
+			for (int i = 0; i < 7; i++)
+			{
+				arr[i] = arr[i] * number;
+			}
+		}
+		else if (choose == 4) {
+			int number;
+			std::cout << "\nВвеедите значение: ";
+			std::cin >> number;
+			for (int i = 0; i < 7; i++)
+			{
+				arr[i] = arr[i] + number;
+			}
+		}
+		else if (choose == 5) {
+			int number;
+			std::cout << "\nВвеедите значение: ";
+			std::cin >> number;
+			for (int i = 0; i < 7; i++)
+			{
+				arr[i] = arr[i] / number;
+			}
+		}
+		else if (choose == 6) {
+			for (int i = 0; i < 7; i++)
+			{
+				arr[i] = 0;
+			}
+		}
+		else if (choose == 7) {
+			std::cout << "\n";
+			for (int i = 0; i < 7; i++)
+			{
+				std::cout << "[ + ] Инициализация | ячейка " << i << ": ";
+				std::cin >> arr[i];
+			}
+		}
+
+		std::cout << "\n";
+		for (int i = 0; i < 7; i++)
+		{
+			std::cout << arr[i] << std::endl;
+		}
+	}*/
+
+
+
+	// Задание 23
+	std::cout << "[ + ] Программа - “Лабиринт”\n\n[ + ] Размер карты :\n[ 1 ] 15 x 15\n[ 2 ] 20 x 20\n[ 3 ] 30 x 30\n\n[ + ] Выберите размер : ";
+	int choose;
+	std::cin >> choose;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
