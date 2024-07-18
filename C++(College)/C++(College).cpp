@@ -1317,14 +1317,42 @@ int main()
 
 
 
-	// Задание 23
-	std::cout << "[ + ] Программа - “Лабиринт”\n\n[ + ] Размер карты :\n[ 1 ] 15 x 15\n[ 2 ] 20 x 20\n[ 3 ] 30 x 30\n\n[ + ] Выберите размер : ";
+	// Задание 24
+	
 	int choose;
-	std::cin >> choose;
+	std::string playerOne = "Игрок 1", playerTwo = "Игрок 2";
+	char figureOne = 'X', figureTwo = 'O';
+	std::cout << "“Крестики нолики”\n\n";
+	while (true)
+	{
+		std::cout << "[ 1 ] Начать игру;\n[ 2 ] Статистика;\n[ 3 ] Настройки;\n[ 4 ] Выйти.\n";
+		std::cin >> choose;
+		if (choose == 1) {
 
+		}
+		else if (choose == 2) {
 
+		}
+		else if (choose == 3) {
+			std::cout << "+ | \033[4mНастройки игрока\033[24m\n\n1 | " << playerOne << "\n2 | " << playerTwo << "\n\n> | Ввод: ";
+			std::cin >> choose;
+			if (choose == 1) {
+				std::cout << "\n+ | \033[4mНастройки игрока\033[24m [1]\n\n";
+				std::cout << "1 | Ник      :  " << playerOne << std::endl;
+				std::cout << "2 | Фигура   :  " << figureOne << std::endl;
+				std::cout << "3 | Цвет     :  \x1b[34mСиний\x1b[0m";
+				std::cin >> choose;
+			}
+			else if (choose == 2) {
 
-
+			}
+			else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+		}
+		else if (choose == 4) {
+			break;
+		}
+		else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+	}
 
 
 
