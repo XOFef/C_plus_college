@@ -1319,34 +1319,238 @@ int main()
 
 	// Задание 24
 	
-	int choose;
-	std::string playerOne = "Игрок 1", playerTwo = "Игрок 2";
-	char figureOne = 'X', figureTwo = 'O';
-	std::cout << "“Крестики нолики”\n\n";
+	int choose, glassesOne = 0, glassesTwo = 0, glassesPC = 0, winOne = 0, winTwo = 0, winPC = 0, looseOne = 0, looseTwo = 0, loosePC = 0, drawOne = 0, drawTwo = 0, drawPC = 0, move;
+	std::string playerOne = "Игрок 1", playerTwo = "Игрок 2", colorOne = "\x1b[34m", colorTwo = "\x1b[31m", colorEnd = "\x1b[0m";
+	char figureOne = 'X', figureTwo = 'O', i = ' ';
+	char arrOne[3] = { '1','2','3' }, arrTwo[3] = { '4','5','6' }, arrTree[3] = { '7','8','9' };
+	std::cout <<"“Крестики нолики”";
 	while (true)
 	{
-		std::cout << "[ 1 ] Начать игру;\n[ 2 ] Статистика;\n[ 3 ] Настройки;\n[ 4 ] Выйти.\n";
+		std::cout << "\n\n[ 1 ] Начать игру;\n[ 2 ] Статистика;\n[ 3 ] Настройки;\n[ 4 ] Выйти.\n";
 		std::cin >> choose;
 		if (choose == 1) {
-
-		}
-		else if (choose == 2) {
-
-		}
-		else if (choose == 3) {
-			std::cout << "+ | \033[4mНастройки игрока\033[24m\n\n1 | " << playerOne << "\n2 | " << playerTwo << "\n\n> | Ввод: ";
+			std::cout << "\nВыберете режим:\n\n[ 1 ] Против другого игрока\n[ 2 ] Против компьютера\n";
 			std::cin >> choose;
+			if (choose == 1) {
+				for (int i = 0; i < 9; i++)
+				{
+					std::cout << "\n\n+ |  \033[4mКрестики нолики\033[24m\n\n";
+					std::cout << "\t" << arrOne[0] << " | " << arrOne[1] << " | " << arrOne[2] << std::endl;
+					std::cout << "\t- - - - -\n";
+					std::cout << "\t" << arrTwo[0] << " | " << arrTwo[1] << " | " << arrTwo[2] << std::endl;
+					std::cout << "\t- - - - -\n";
+					std::cout << "\t" << arrTree[0] << " | " << arrTree[1] << " | " << arrTree[2] << std::endl;
+
+					std::cout << "\n+ | Информация\n";
+					if (i % 2 != 0 and i != 0) std::cout << "+ | " << colorOne << playerOne << colorEnd << " ход на клетку: " << move << std::endl;
+					if (i % 2 == 0 and i != 0) std::cout << "+ | " << colorTwo << playerTwo << colorEnd << " ход на клетку: " << move << std::endl;
+
+					if (i % 2 == 0) std::cout << "\n> | Ходит " << colorOne << playerOne << colorEnd << ": ";
+					if (i % 2 != 0) std::cout << "\n> | Ходит " << colorTwo << playerTwo << colorEnd << ": ";
+
+					std::cin >> move;
+					while (true)
+					{
+						if (arrOne[0] == move or arrOne[1] == move or arrOne[2] == move or arrTwo[0] == move or arrTwo[1] == move or arrTwo[2] == move or arrTree[0] == move or arrTree[1] == move or arrTree[2] == move) {
+							std::cout << "\x1b[41mПоле уже занято!\x1b[0m\n\n";
+							std::cin >> move;
+						}
+						else break;
+					}
+
+					if (i % 2 == 0)
+					{
+						switch (move)
+						{
+						case 1:
+							arrOne[0] = figureOne;
+							break;
+						case 2:
+							arrOne[1] = figureOne;
+							break;
+						case 3:
+							arrOne[2] = figureOne;
+							break;
+						case 4:
+							arrTwo[0] = figureOne;
+							break;
+						case 5:
+							arrTwo[1] = figureOne;
+							break;
+						case 6:
+							arrTwo[2] = figureOne;
+							break;
+						case 7:
+							arrTree[0] = figureOne;
+							break;
+						case 8:
+							arrTree[1] = figureOne;
+							break;
+						case 9:
+							arrTree[2] = figureOne;
+							break;
+						default:
+							std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+							break;
+						}
+					}
+
+					if (i % 2 != 0)
+					{
+						switch (move)
+						{
+						case 1:
+							arrOne[0] = figureTwo;
+							break;
+						case 2:
+							arrOne[1] = figureTwo;
+							break;
+						case 3:
+							arrOne[2] = figureTwo;
+							break;
+						case 4:
+							arrTwo[0] = figureTwo;
+							break;
+						case 5:
+							arrTwo[1] = figureTwo;
+							break;
+						case 6:
+							arrTwo[2] = figureTwo;
+							break;
+						case 7:
+							arrTree[0] = figureTwo;
+							break;
+						case 8:
+							arrTree[1] = figureTwo;
+							break;
+						case 9:
+							arrTree[2] = figureTwo;
+							break;
+						default:
+							std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+							break;
+						}
+					}
+				}
+				
+			}
+
+			else if (choose == 2) {
+
+			}
+
+			else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+		}
+
+
+		else if (choose == 2) {
+			std::cout << "\n+ | Статистика\n\n";
+			std::cout << "                  \033[4m\x1b[32mW\x1b[0m\033[24m     \033[4m\x1b[31mL\x1b[0m\033[24m       \033[4m\x1b[33mD\x1b[0m\033[24m           \033[4mОчки\033[24m\n";
+			std::cout << "1 | " << playerOne << "\t  " << winOne << " \t" << looseOne << " \t" << drawOne << " \t|   " << glassesOne << std::endl;
+			std::cout << "2 | " << playerTwo << "\t  " << winTwo << " \t" << looseTwo << " \t" << drawTwo << " \t|   " << glassesTwo << std::endl;
+			std::cout << "3 | " << "Компьютер" << "\t  " << winPC << " \t" << loosePC << " \t" << drawPC << " \t|   " << glassesPC << std::endl;
+		}
+
+
+		else if (choose == 3) {
+			std::cout << "\n+ | \033[4mНастройки игрока\033[24m\n\n1 | Игрок 1\n2 | Игрок 2\n\n> | Ввод: ";
+			std::cin >> choose;
+
+
 			if (choose == 1) {
 				std::cout << "\n+ | \033[4mНастройки игрока\033[24m [1]\n\n";
 				std::cout << "1 | Ник      :  " << playerOne << std::endl;
 				std::cout << "2 | Фигура   :  " << figureOne << std::endl;
-				std::cout << "3 | Цвет     :  \x1b[34mСиний\x1b[0m";
+				std::cout << "3 | Цвет     :  " << colorOne << "Цвет\x1b[0m\n";
+				std::cout << "4 | Назад\n";
 				std::cin >> choose;
+				if (choose == 4) continue;
+				else if (choose == 1) {
+					std::cout << "Введите новый ник: ";
+					std::cin >> playerOne;
+				}
+				else if (choose == 2) {
+					std::cout << "Введите новую фигуру: ";
+					std::cin >> figureOne;
+				}
+				else if (choose == 3) {
+					std::cout << "Выберете цвет:\n1 Синий\n2 Красный\n3 Голубой\n4 Зеленый\n5 Желтый\n";
+					int chooseColor;
+					std::cin >> chooseColor;
+					switch (chooseColor)
+					{
+					case 1:
+						colorOne = "\x1b[34m";
+						break;
+					case 2:
+						colorOne = "\x1b[31m";
+						break;
+					case 3:
+						colorOne = "\x1b[36m";
+						break;
+					case 4:
+						colorOne = "\x1b[32m";
+						break;
+					case 5:
+						colorOne = "\x1b[33m";
+						break;
+					default:
+						std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+						break;
+					}
+				}
+				else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 			}
-			else if (choose == 2) {
 
+
+			else if (choose == 2) {
+				std::cout << "\n+ | \033[4mНастройки игрока\033[24m [2]\n\n";
+				std::cout << "1 | Ник      :  " << playerTwo << std::endl;
+				std::cout << "2 | Фигура   :  " << figureTwo << std::endl;
+				std::cout << "3 | Цвет     :  " << colorTwo << "Цвет\x1b[0m\n";
+				std::cout << "4 | Назад\n";
+				std::cin >> choose;
+				if (choose == 4) continue;
+				else if (choose == 1) {
+					std::cout << "Введите новый ник: ";
+					std::cin >> playerTwo;
+				}
+				else if (choose == 2) {
+					std::cout << "Введите новую фигуру: ";
+					std::cin >> figureTwo;
+				}
+				else if (choose == 3) {
+					std::cout << "Выберете цвет:\n1 Синий\n2 Красный\n3 Голубой\n4 Зеленый\n5 Желтый\n";
+					int chooseColor;
+					std::cin >> chooseColor;
+					switch (chooseColor)
+					{
+					case 1:
+						colorTwo = "\x1b[34m";
+						break;
+					case 2:
+						colorTwo = "\x1b[31m";
+						break;
+					case 3:
+						colorTwo = "\x1b[36m";
+						break;
+					case 4:
+						colorTwo = "\x1b[32m";
+						break;
+					case 5:
+						colorTwo = "\x1b[33m";
+						break;
+					default:
+						std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+						break;
+					}
+				}
+				else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 			}
 			else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+
+
+
 		}
 		else if (choose == 4) {
 			break;
