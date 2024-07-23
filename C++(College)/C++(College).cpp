@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <cstdlib>
+#include <windows.h>
+#include <string>
 
 //// Задание 12
 //void win() {
@@ -1319,10 +1321,11 @@ int main()
 
 	// Задание 24
 	
-	int choose, glassesOne = 0, glassesTwo = 0, glassesPC = 0, winOne = 0, winTwo = 0, winPC = 0, looseOne = 0, looseTwo = 0, loosePC = 0, drawOne = 0, drawTwo = 0, drawPC = 0, move;
-	std::string playerOne = "Игрок 1", playerTwo = "Игрок 2", colorOne = "\x1b[34m", colorTwo = "\x1b[31m", colorEnd = "\x1b[0m";
-	char figureOne = 'X', figureTwo = 'O', i = ' ';
-	char arrOne[3] = { '1','2','3' }, arrTwo[3] = { '4','5','6' }, arrTree[3] = { '7','8','9' };
+	int choose, winOne = 0, winTwo = 0, winPC = 0, looseOne = 0, looseTwo = 0, loosePC = 0, drawOne = 0, drawTwo = 0, drawPC = 0, move;
+	std::string playerOne = "Игрок 1", playerTwo = "Игрок 2", colorOne = "\x1b[34m", colorTwo = "\x1b[31m", colorEnd = "\x1b[0m", figureOne = "X", figureTwo = "O", figureFinalOne = "\x1b[34mX\x1b[0m", figureFinalTwo = "\x1b[31mO\x1b[0m";
+	char i = ' ';
+	std::string arrOne[3] = { "1","2","3" }, arrTwo[3] = { "4","5","6"}, arrTree[3] = { "7","8","9" };
+	double   glassesOne = 0, glassesTwo = 0, glassesPC = 0;
 	std::cout <<"“Крестики нолики”";
 	while (true)
 	{
@@ -1341,21 +1344,269 @@ int main()
 					std::cout << "\t- - - - -\n";
 					std::cout << "\t" << arrTree[0] << " | " << arrTree[1] << " | " << arrTree[2] << std::endl;
 
+					// 1plaeer
+					if (arrOne[0] == figureFinalOne and arrTwo[0] == figureFinalOne and arrTree[0] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[1] == figureFinalOne and arrTwo[1] == figureFinalOne and arrTree[1] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[2] == figureFinalOne and arrTwo[2] == figureFinalOne and arrTree[2] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[0] == figureFinalOne and arrOne[1] == figureFinalOne and arrOne[2] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrTwo[0] == figureFinalOne and arrTwo[1] == figureFinalOne and arrTwo[2] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrTree[0] == figureFinalOne and arrTree[1] == figureFinalOne and arrTree[2] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[0] == figureFinalOne and arrTwo[1] == figureFinalOne and arrTree[2] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[2] == figureFinalOne and arrTwo[1] == figureFinalOne and arrTree[0] == figureFinalOne) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorOne << playerOne << colorEnd;
+						glassesOne += 5;
+						glassesTwo -= 6;
+						winOne += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+
+					// 2plaeer
+					if (arrOne[0] == figureFinalTwo and arrTwo[0] == figureFinalTwo and arrTree[0] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[1] == figureFinalTwo and arrTwo[1] == figureFinalTwo and arrTree[1] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[2] == figureFinalTwo and arrTwo[2] == figureFinalTwo and arrTree[2] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[0] == figureFinalTwo and arrOne[1] == figureFinalTwo and arrOne[2] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrTwo[0] == figureFinalTwo and arrTwo[1] == figureFinalTwo and arrTwo[2] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrTree[0] == figureFinalTwo and arrTree[1] == figureFinalTwo and arrTree[2] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[0] == figureFinalTwo and arrTwo[1] == figureFinalTwo and arrTree[2] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					else if (arrOne[2] == figureFinalTwo and arrTwo[1] == figureFinalTwo and arrTree[0] == figureFinalTwo) {
+						std::cout << "\n\n\x1b[32mПобедил:\x1b[0m " << colorTwo << playerTwo << colorEnd;
+						glassesTwo += 5;
+						glassesTwo -= 6;
+						winTwo += 1;
+						looseTwo += 1;
+						Sleep(10000);
+						system("cls");
+						break;
+					}
+					if (i == 8) {
+						std::cout << "\n\n\x1b[31mНичья!\x1b[0m";
+						drawOne += 1;
+						drawTwo += 1;
+						glassesOne -= 1.2;
+						glassesTwo -= 1.2;
+						Sleep(10000);
+					}
+
 					std::cout << "\n+ | Информация\n";
 					if (i % 2 != 0 and i != 0) std::cout << "+ | " << colorOne << playerOne << colorEnd << " ход на клетку: " << move << std::endl;
 					if (i % 2 == 0 and i != 0) std::cout << "+ | " << colorTwo << playerTwo << colorEnd << " ход на клетку: " << move << std::endl;
 
 					if (i % 2 == 0) std::cout << "\n> | Ходит " << colorOne << playerOne << colorEnd << ": ";
 					if (i % 2 != 0) std::cout << "\n> | Ходит " << colorTwo << playerTwo << colorEnd << ": ";
-
-					std::cin >> move;
+					
 					while (true)
 					{
-						if (arrOne[0] == move or arrOne[1] == move or arrOne[2] == move or arrTwo[0] == move or arrTwo[1] == move or arrTwo[2] == move or arrTree[0] == move or arrTree[1] == move or arrTree[2] == move) {
-							std::cout << "\x1b[41mПоле уже занято!\x1b[0m\n\n";
-							std::cin >> move;
+						std::cin >> move;
+
+						if (move == 1) {
+							if (arrOne[0] == figureFinalOne or arrOne[0] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
 						}
-						else break;
+
+						else if (move == 2) {
+							if (arrOne[1] == figureFinalOne or arrOne[1] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 3) {
+							if (arrOne[2] == figureFinalOne or arrOne[2] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 4) {
+							if (arrTwo[0] == figureFinalOne or arrTwo[0] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 5) {
+							if (arrTwo[1] == figureFinalOne or arrTwo[1] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 6) {
+							if (arrTwo[2] == figureFinalOne or arrTwo[2] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 7) {
+							if (arrTree[0] == figureFinalOne or arrTree[0] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 8) {
+							if (arrTree[1] == figureFinalOne or arrTree[1] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else if (move == 9) {
+							if (arrTree[2] == figureFinalOne or arrTree[2] == figureFinalTwo) {
+								std::cout << "\x1b[41mПоле занято!\x1b[0m\n\n";
+								continue;
+							}
+							else break;
+						}
+
+						else {
+							while (true)
+							{
+								std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+								std::cin >> move;
+								if (move < 9) break;
+							}
+						}
 					}
 
 					if (i % 2 == 0)
@@ -1363,31 +1614,31 @@ int main()
 						switch (move)
 						{
 						case 1:
-							arrOne[0] = figureOne;
+							arrOne[0] = figureFinalOne;
 							break;
 						case 2:
-							arrOne[1] = figureOne;
+							arrOne[1] = figureFinalOne;
 							break;
 						case 3:
-							arrOne[2] = figureOne;
+							arrOne[2] = figureFinalOne;
 							break;
 						case 4:
-							arrTwo[0] = figureOne;
+							arrTwo[0] = figureFinalOne;
 							break;
 						case 5:
-							arrTwo[1] = figureOne;
+							arrTwo[1] = figureFinalOne;
 							break;
 						case 6:
-							arrTwo[2] = figureOne;
+							arrTwo[2] = figureFinalOne;
 							break;
 						case 7:
-							arrTree[0] = figureOne;
+							arrTree[0] = figureFinalOne;
 							break;
 						case 8:
-							arrTree[1] = figureOne;
+							arrTree[1] = figureFinalOne;
 							break;
 						case 9:
-							arrTree[2] = figureOne;
+							arrTree[2] = figureFinalOne;
 							break;
 						default:
 							std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
@@ -1400,38 +1651,45 @@ int main()
 						switch (move)
 						{
 						case 1:
-							arrOne[0] = figureTwo;
+							arrOne[0] = figureFinalTwo;
 							break;
 						case 2:
-							arrOne[1] = figureTwo;
+							arrOne[1] = figureFinalTwo;
 							break;
 						case 3:
-							arrOne[2] = figureTwo;
+							arrOne[2] = figureFinalTwo;
 							break;
 						case 4:
-							arrTwo[0] = figureTwo;
+							arrTwo[0] = figureFinalTwo;
 							break;
 						case 5:
-							arrTwo[1] = figureTwo;
+							arrTwo[1] = figureFinalTwo;
 							break;
 						case 6:
-							arrTwo[2] = figureTwo;
+							arrTwo[2] = figureFinalTwo;
 							break;
 						case 7:
-							arrTree[0] = figureTwo;
+							arrTree[0] = figureFinalTwo;
 							break;
 						case 8:
-							arrTree[1] = figureTwo;
+							arrTree[1] = figureFinalTwo;
 							break;
 						case 9:
-							arrTree[2] = figureTwo;
+							arrTree[2] = figureFinalTwo;
 							break;
 						default:
 							std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 							break;
 						}
 					}
+
+					
+					
+					Sleep(500);
+					system("cls");
 				}
+
+				
 				
 			}
 
@@ -1470,8 +1728,10 @@ int main()
 					std::cin >> playerOne;
 				}
 				else if (choose == 2) {
+					figureFinalOne = "";
 					std::cout << "Введите новую фигуру: ";
 					std::cin >> figureOne;
+					figureFinalOne = colorOne + figureOne + colorEnd;
 				}
 				else if (choose == 3) {
 					std::cout << "Выберете цвет:\n1 Синий\n2 Красный\n3 Голубой\n4 Зеленый\n5 Желтый\n";
@@ -1481,23 +1741,29 @@ int main()
 					{
 					case 1:
 						colorOne = "\x1b[34m";
+						figureFinalOne = colorOne + figureOne + colorEnd;
 						break;
 					case 2:
 						colorOne = "\x1b[31m";
+						figureFinalOne = colorOne + figureOne + colorEnd;
 						break;
 					case 3:
 						colorOne = "\x1b[36m";
+						figureFinalOne = colorOne + figureOne + colorEnd;
 						break;
 					case 4:
 						colorOne = "\x1b[32m";
+						figureFinalOne = colorOne + figureOne + colorEnd;
 						break;
 					case 5:
 						colorOne = "\x1b[33m";
+						figureFinalOne = colorOne + figureOne + colorEnd;
 						break;
 					default:
 						std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 						break;
 					}
+					figureFinalOne = colorOne + figureOne + colorEnd;
 				}
 				else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 			}
@@ -1518,6 +1784,7 @@ int main()
 				else if (choose == 2) {
 					std::cout << "Введите новую фигуру: ";
 					std::cin >> figureTwo;
+					figureFinalTwo = colorTwo + figureTwo + colorEnd;
 				}
 				else if (choose == 3) {
 					std::cout << "Выберете цвет:\n1 Синий\n2 Красный\n3 Голубой\n4 Зеленый\n5 Желтый\n";
@@ -1544,6 +1811,7 @@ int main()
 						std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 						break;
 					}
+					figureFinalTwo = colorTwo + figureTwo + colorEnd;
 				}
 				else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 			}

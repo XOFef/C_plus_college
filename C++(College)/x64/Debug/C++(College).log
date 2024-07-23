@@ -1,3 +1,3 @@
 ﻿  C++(College).cpp
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(21,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(23,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   C++(College).vcxproj -> C:\Users\reter\source\repos\C++(College)\x64\Debug\C++(College).exe
