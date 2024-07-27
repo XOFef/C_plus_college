@@ -2,6 +2,11 @@
 #include <cstdlib>
 #include <windows.h>
 #include <string>
+#include <fstream>
+#include <vector>
+#include <filesystem>
+#include <ctime>
+#include <string.h>
 
 //// Задание 12
 //void win() {
@@ -16,6 +21,11 @@
 //void GameOverWin() {
 //	std::cout << "\n\nИгра закончена! Вы Выйграли!";
 //}
+
+
+
+
+
 
 int main()
 {
@@ -2285,7 +2295,7 @@ int main()
 
 	// Задание 25
 
-	int arr[5][5];
+	/*int arr[5][5];
 	int choose;
 	for (int i = 0; i < 5; i++)
 	{
@@ -2406,9 +2416,81 @@ int main()
 			}
 		}
 		else std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+	}*/
+
+
+
+
+	// Задание 26
+
+	int choose, numberFiles = 0, i = 0, number = 0;
+	std::string text, txt = ".txt", correctText;
+	std::string filesNameArr[10];
+	while (true)
+	{
+		std::cout << "\n“Редактор текста 0.1”\n\n[ 1 ] Создать файл\n[ 2 ] Открыть файл\n[ 3 ] Настройки\n[ 4 ] Выйти\n";
+		std::cin >> choose;
+		if (choose == 1) {
+
+				std::cout << "Введите текст (нажмите 's' для сохранения, 'q' для выхода):\n";
+				while (true)
+				{	
+					getline(std::cin, text);
+					if (text == "s") {
+						std::string filename;
+						std::cout << "Введите имя файла для сохранения: ";
+						std::getline(std::cin, filename);
+						filesNameArr[i] += filename;
+						std::ofstream myfile(filename+txt);
+						i++;
+						number++;
+						if (myfile.is_open()) {
+							myfile << correctText;
+							myfile.close();
+							std::cout << "\x1b[42mФайл сохранен.\x1b[0m\n";
+							numberFiles += 1;
+							break;
+						}
+						else {
+							std::cout << "\x1b[41mОшибка при сохранении файла.\x1b[0m\n";
+						}
+					}
+					else if (text == "q") {
+						if (text[0] == '\0') {
+							break;
+						}
+						else {
+							char choice;
+							std::cout << "Вы не сохранили файл. Вы уверены, что хотите выйти? (y/n): ";
+							std::cin >> choice;
+							std::cin.ignore();
+							if (choice == 'y') {
+								break;
+							}
+							else {
+								correctText += text + "\n";
+							}
+						}
+					}
+					correctText += text + "\n";
+				}
+		}
+
+		else if (choose == 2) {
+			std::cout << "\n[ + ] Сохраненые файлы:\n\n";
+			std::cout << "    Название\t\tДата\t\tВремя\n";
+			for (int i = 0; i < number; i++)
+			{
+				std::cout << "[ " << i+1 << " ] " << filesNameArr[i] << std::endl;
+			}
+		}
+		else if (choose == 3) {
+
+		}
+		else if (choose == 4) {
+
+		}
 	}
-
-
 
 
 

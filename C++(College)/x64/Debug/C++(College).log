@@ -1,3 +1,4 @@
 ﻿  C++(College).cpp
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(23,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Visual Studio\VC\Tools\MSVC\14.40.33807\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(33,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   C++(College).vcxproj -> C:\Users\reter\source\repos\C++(College)\x64\Debug\C++(College).exe
