@@ -3,11 +3,12 @@
 #include <windows.h>
 #include <string>
 #include <fstream>
-#include <vector>
 #include <filesystem>
 #include <ctime>
 #include <string.h>
-
+#include <chrono>
+#include <iomanip>
+#include <vector>
 //// Задание 12
 //void win() {
 //	std::cout << "Ответ верный!\n\n";
@@ -2424,31 +2425,35 @@ int main()
 	// Задание 26
 
 	int choose, numberFiles = 0, i = 0, number = 0;
-	std::string text, txt = ".txt", correctText;
+	std::string text, txt = ".txt", correctText, line, filename, filenameCorrect;
 	std::string filesNameArr[10];
+	std::time_t now = std::time(nullptr);
+	std::tm timeArray[10];
 	while (true)
 	{
 		std::cout << "\n“Редактор текста 0.1”\n\n[ 1 ] Создать файл\n[ 2 ] Открыть файл\n[ 3 ] Настройки\n[ 4 ] Выйти\n";
 		std::cin >> choose;
 		if (choose == 1) {
 
-				std::cout << "Введите текст (нажмите 's' для сохранения, 'q' для выхода):\n";
+				std::cout << "\nВведите текст (нажмите 's' для сохранения, 'q' для выхода):\n";
 				while (true)
 				{	
 					getline(std::cin, text);
 					if (text == "s") {
-						std::string filename;
-						std::cout << "Введите имя файла для сохранения: ";
+						std::cout << "\nВведите имя файла для сохранения: ";
 						std::getline(std::cin, filename);
-						filesNameArr[i] += filename;
-						std::ofstream myfile(filename+txt);
-						i++;
+						filenameCorrect = filename + txt;
+						filesNameArr[i] += filenameCorrect;
+						std::ofstream myfile(filenameCorrect);
 						number++;
 						if (myfile.is_open()) {
 							myfile << correctText;
 							myfile.close();
 							std::cout << "\x1b[42mФайл сохранен.\x1b[0m\n";
 							numberFiles += 1;
+							std::time_t now = std::time(nullptr);
+							timeArray[i] = *std::localtime(&now);
+							i++;
 							break;
 						}
 						else {
@@ -2461,7 +2466,7 @@ int main()
 						}
 						else {
 							char choice;
-							std::cout << "Вы не сохранили файл. Вы уверены, что хотите выйти? (y/n): ";
+							std::cout << "\nВы не сохранили файл. Вы уверены, что хотите выйти? (y/n): ";
 							std::cin >> choice;
 							std::cin.ignore();
 							if (choice == 'y') {
@@ -2481,19 +2486,32 @@ int main()
 			std::cout << "    Название\t\tДата\t\tВремя\n";
 			for (int i = 0; i < number; i++)
 			{
-				std::cout << "[ " << i+1 << " ] " << filesNameArr[i] << std::endl;
+				std::cout << "[" << i+1 << "] " << filesNameArr[i] << "\t\t"  << std::put_time(&timeArray[i], "%Y-%m-%d") << "      " << std::put_time(&timeArray[i], "%H:%M:%S") << std::endl;
 			}
+			std::cout << "\n\n[ + ] Ввод: ";
+			std::cin >> choose;
+			choose--;
+			std::ifstream myfile(filesNameArr[choose]);
+			if (!myfile) {
+				std::cout << "Ошибка: не удалось открыть файл " << filesNameArr[choose] << std::endl;
+			}
+			while (std::getline(myfile, line)) {
+				std::cout << line << std::endl;
+			}
+			std::cout << "\n\n";
+			myfile.close();
 		}
 		else if (choose == 3) {
 
 		}
 		else if (choose == 4) {
-
+			break;
 		}
 	}
 
 
 
+	
 
 
 
