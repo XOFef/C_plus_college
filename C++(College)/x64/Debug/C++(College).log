@@ -1,10 +1,4 @@
 ﻿  C++(College).cpp
 D:\Visual Studio\VC\Tools\MSVC\14.40.33807\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(48,10): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(49,10): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(54,9): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(55,9): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(61,9): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(66,9): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(74,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\reter\source\repos\C++(College)\C++(College)\C++(College).cpp(112,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   C++(College).vcxproj -> C:\Users\reter\source\repos\C++(College)\x64\Debug\C++(College).exe

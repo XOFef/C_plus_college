@@ -25,47 +25,85 @@
 
 
 // Задание 27
-double summ(double a, double b) {
-	return a + b;
+//double summ(double a, double b) {
+//	return a + b;
+//}
+//double subtraction(double a, double b) {
+//	return a - b;
+//}
+//double multiply(double a, double b) {
+//	return a * b;
+//}
+//double share(double a, double b) {
+//	return a / b;
+//}
+//int remainder(int a, int b) {
+//	return a % b;
+//}
+//double degree(double a, double b) {
+//	return pow(a, b);
+//}
+//double root(double a, double b) {
+//	int c, d;
+//	c = sqrt(a);
+//	d = sqrt(b);
+//	return c, d;
+//}
+//double cube(double a, double b) {
+//	int c = 0, d = 0, f;
+//	c = pow(a, 3);
+//	d = pow(b, 3);
+//	f = c + d;
+//	return f;
+//}
+//double sine(double a, double b) {
+//	int c;
+//	c = sin(a*b);
+//	return c;
+//}
+//double cosine(double a, double b) {
+//	int c;
+//	c = cos(a * b);
+//	return c;
+//}
+
+
+
+// Задание 28
+std::string console(std::string a, int b = 0, bool c = false) {
+	std::string colorOne = "\x1b[37m", colorEnd = "\x1b[0m", underline = "\033[4m", currectText, underlineEnd = "\033[24m";
+	switch (b) {
+
+	case 1:
+		colorOne = "\x1b[34m";
+		break;
+	case 2:
+		colorOne = "\x1b[31m";
+		break;
+	case 3:
+		colorOne = "\x1b[36m";
+		break;
+	case 4:
+		colorOne = "\x1b[32m";
+		break;
+	case 5:
+		colorOne = "\x1b[33m";
+		break;
+	default:
+		break;
+	}
+	if (c == 1) {
+		currectText = underline + colorOne + a + underlineEnd + colorEnd;
+		std::cout << currectText;
+		return currectText;
+	}
+	else {
+		currectText = colorOne + a + colorEnd;
+		std::cout << currectText;
+		return currectText;
+	}
 }
-double subtraction(double a, double b) {
-	return a - b;
-}
-double multiply(double a, double b) {
-	return a * b;
-}
-double share(double a, double b) {
-	return a / b;
-}
-int remainder(int a, int b) {
-	return a % b;
-}
-double degree(double a, double b) {
-	return pow(a, b);
-}
-double root(double a, double b) {
-	int c, d;
-	c = sqrt(a);
-	d = sqrt(b);
-	return c, d;
-}
-double cube(double a, double b) {
-	int c = 0, d = 0, f;
-	c = pow(a, 3);
-	d = pow(b, 3);
-	f = c + d;
-	return f;
-}
-double sine(double a, double b) {
-	int c;
-	c = sin(a*b);
-	return c;
-}
-double cosine(double a, double b) {
-	int c;
-	c = cos(a * b);
-	return c;
-}
+
 
 
 int main()
@@ -2553,9 +2591,9 @@ int main()
 
 	// Задание 27
 
-	int choose, numberOne, numberTwo;
+	/*int choose, numberOne, numberTwo;
 	std::cout << "1.  складывать\n2.  вычитать\n3.  умножать\n4.  делить\n5.  деление от остатка\n6.  степень\n7.  корень\n8.  куб\n9.  синус\n10. косинус\n";
-	std::cin >> choose;
+
 	std::cout << "Введите первое число: ";
 	std::cin >> numberOne;
 	while (true)
@@ -2566,6 +2604,7 @@ int main()
 		}
 		else break;
 	}
+
 	std::cout << "Введите второе число: ";
 	std::cin >> numberTwo;
 	while (true)
@@ -2576,6 +2615,17 @@ int main()
 		}
 		else break;
 	}
+
+	std::cout << "Выберете операцию: ";
+	std::cin >> choose; while (true)
+	{
+		if (choose <= 0 and choose > 10) {
+			std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+			std::cin >> numberTwo;
+		}
+		else break;
+	}
+
 	switch (choose)
 	{
 	case 1: 
@@ -2611,16 +2661,48 @@ int main()
 	default:
 		std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
 		break;
+	}*/
+
+
+
+	// Задание 28
+
+	std::string text;
+	int chooseColor = 0, choose, chooseSwitch = 1;
+	bool chooseUnderline = false;
+	std::cout << "Введите текст:\n";
+	getline(std::cin, text);
+
+	std::cout << "\nХотите выбрать цвет?\n[1] Да\n[2] Нет\n";
+	std::cin >> choose;
+	if (choose == 1) {
+		std::cout << "\nВыберете цвет:\n1 Синий\n2 Красный\n3 Голубой\n4 Зеленый\n5 Желтый\n";
+		std::cin >> chooseColor;
+		chooseSwitch = 2;
 	}
 
+	std::cout << "\nХотите подчеркнуть текст?\n[1] Да\n[2] Нет\n";
+	std::cin >> choose;
+	std::cout << "\n\n";
+	if (choose == 1) {
+		chooseUnderline = true;
+		chooseSwitch = 3;
+	}
 
-
-
-
-
-
-
-
+	switch (chooseSwitch)
+	{
+	case 1:
+		console(text);
+		break;
+	case 2:
+		console(text, chooseColor);
+		break;
+	case 3:
+		console(text, chooseColor, chooseUnderline);
+		break;
+	default:
+		break;
+	}
 
 
 
