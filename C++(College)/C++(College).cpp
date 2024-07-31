@@ -24,8 +24,48 @@
 //}
 
 
-
-
+// Задание 27
+double summ(double a, double b) {
+	return a + b;
+}
+double subtraction(double a, double b) {
+	return a - b;
+}
+double multiply(double a, double b) {
+	return a * b;
+}
+double share(double a, double b) {
+	return a / b;
+}
+int remainder(int a, int b) {
+	return a % b;
+}
+double degree(double a, double b) {
+	return pow(a, b);
+}
+double root(double a, double b) {
+	int c, d;
+	c = sqrt(a);
+	d = sqrt(b);
+	return c, d;
+}
+double cube(double a, double b) {
+	int c = 0, d = 0, f;
+	c = pow(a, 3);
+	d = pow(b, 3);
+	f = c + d;
+	return f;
+}
+double sine(double a, double b) {
+	int c;
+	c = sin(a*b);
+	return c;
+}
+double cosine(double a, double b) {
+	int c;
+	c = cos(a * b);
+	return c;
+}
 
 
 int main()
@@ -2424,7 +2464,7 @@ int main()
 
 	// Задание 26
 
-	int choose, numberFiles = 0, i = 0, number = 0;
+	/*int choose, numberFiles = 0, i = 0, number = 0;
 	std::string text, txt = ".txt", correctText, line, filename, filenameCorrect;
 	std::string filesNameArr[10];
 	std::time_t now = std::time(nullptr);
@@ -2507,15 +2547,71 @@ int main()
 		else if (choose == 4) {
 			break;
 		}
+	}*/
+
+
+
+	// Задание 27
+
+	int choose, numberOne, numberTwo;
+	std::cout << "1.  складывать\n2.  вычитать\n3.  умножать\n4.  делить\n5.  деление от остатка\n6.  степень\n7.  корень\n8.  куб\n9.  синус\n10. косинус\n";
+	std::cin >> choose;
+	std::cout << "Введите первое число: ";
+	std::cin >> numberOne;
+	while (true)
+	{
+		if (numberOne <= 0) {
+			std::cout << "\x1b[41mЧисло меньше или равно 0!\x1b[0m\n\n";
+			std::cin >> numberOne;
+		}
+		else break;
 	}
-
-
-
-	
-
-
-
-
+	std::cout << "Введите второе число: ";
+	std::cin >> numberTwo;
+	while (true)
+	{
+		if (numberTwo <= 0) {
+			std::cout << "\x1b[41mЧисло меньше или равно 0!\x1b[0m\n\n";
+			std::cin >> numberTwo;
+		}
+		else break;
+	}
+	switch (choose)
+	{
+	case 1: 
+		std::cout << summ(numberOne, numberTwo);
+		break;
+	case 2:
+		std::cout << subtraction(numberOne, numberTwo);
+		break;
+	case 3:
+		std::cout << multiply(numberOne, numberTwo);
+		break;
+	case 4:
+		std::cout << share(numberOne, numberTwo);
+		break;
+	case 5:
+		std::cout << remainder(numberOne, numberTwo);
+		break;
+	case 6:
+		std::cout << degree(numberOne, numberTwo);
+		break;
+	case 7:
+		std::cout << root(numberOne, numberTwo);
+		break;
+	case 8:
+		std::cout << cube(numberOne, numberTwo);
+		break;
+	case 9:
+		std::cout << sine(numberOne, numberTwo);
+		break;
+	case 10:
+		std::cout << cosine(numberOne, numberTwo);
+		break;
+	default:
+		std::cout << "\x1b[41mОшибка ввода!\x1b[0m\n\n";
+		break;
+	}
 
 
 
